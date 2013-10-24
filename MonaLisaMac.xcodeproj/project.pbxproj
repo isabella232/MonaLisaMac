@@ -7,17 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		835931214B871A85F74E15C3 /* MLHeadPositionDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 83593CEBC66E28299C2638D5 /* MLHeadPositionDetector.m */; };
+		835933FB27E268347F56BEC9 /* MLHeadPositionSmoother.m in Sources */ = {isa = PBXBuildFile; fileRef = 835938665B1768F8B576D558 /* MLHeadPositionSmoother.m */; };
+		835934703115F5C169E7C384 /* MLOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 835937E43E3BB91ED061F611 /* MLOverlayView.m */; };
+		83593839ED7468B95E1ACCFC /* MLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83593CB5C828A4E2E987BEE8 /* MLAppDelegate.m */; };
+		83593D192663CA55B043F319 /* MLHeadPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8359384685875DC57C6F5E47 /* MLHeadPosition.m */; };
+		CA0D73201819D447007F68CE /* libOpenNI.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0D731F1819D447007F68CE /* libOpenNI.dylib */; };
 		CA24CA5D18171395008E9E0F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA24CA5C18171395008E9E0F /* Cocoa.framework */; };
 		CA24CA6718171395008E9E0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA24CA6518171395008E9E0F /* InfoPlist.strings */; };
 		CA24CA6918171395008E9E0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA24CA6818171395008E9E0F /* main.m */; };
 		CA24CA6D18171395008E9E0F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CA24CA6B18171395008E9E0F /* Credits.rtf */; };
-		CA24CA7018171395008E9E0F /* MLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CA24CA6F18171395008E9E0F /* MLAppDelegate.m */; };
 		CA24CA7318171395008E9E0F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA24CA7118171395008E9E0F /* MainMenu.xib */; };
 		CA24CA7518171395008E9E0F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA24CA7418171395008E9E0F /* Images.xcassets */; };
 		CA24CA7C18171396008E9E0F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA24CA7B18171396008E9E0F /* XCTest.framework */; };
 		CA24CA7D18171396008E9E0F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA24CA5C18171395008E9E0F /* Cocoa.framework */; };
 		CA24CA8518171396008E9E0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA24CA8318171396008E9E0F /* InfoPlist.strings */; };
 		CA24CA8718171396008E9E0F /* MonaLisaMacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA24CA8618171396008E9E0F /* MonaLisaMacTests.m */; };
+		CA2E0EFA18172C86000F7B06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA66CA181716D100793230 /* CoreGraphics.framework */; };
+		CA4FDC4A181889D30093B11E /* MLVideoPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4FDC48181889D30093B11E /* MLVideoPreviewViewController.m */; };
+		CA4FDC4B181889D30093B11E /* MLVideoPreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4FDC49181889D30093B11E /* MLVideoPreviewView.xib */; };
+		CABA66C81817168200793230 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA66C71817168200793230 /* AVFoundation.framework */; };
+		CABA66CE181716FE00793230 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA66C71817168200793230 /* AVFoundation.framework */; };
+		CABA66D01817170400793230 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA66CF1817170400793230 /* QuartzCore.framework */; };
+		CABA66D11817172000793230 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA66CC181716E800793230 /* CoreMedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +43,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8359331C1DB2A4F7D8832EB3 /* MLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAppDelegate.h; sourceTree = "<group>"; };
+		8359377198F49F3D8D4B83FA /* MLHeadPositionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLHeadPositionDetector.h; sourceTree = "<group>"; };
+		835937E43E3BB91ED061F611 /* MLOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLOverlayView.m; sourceTree = "<group>"; };
+		8359382663A0D01AF1101B2E /* MLHeadPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLHeadPosition.h; sourceTree = "<group>"; };
+		8359384685875DC57C6F5E47 /* MLHeadPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLHeadPosition.m; sourceTree = "<group>"; };
+		835938665B1768F8B576D558 /* MLHeadPositionSmoother.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLHeadPositionSmoother.m; path = ../MLHeadPositionSmoother.m; sourceTree = "<group>"; };
+		83593AFC349F47A855DA10CD /* MLHeadPositionSmoother.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLHeadPositionSmoother.h; path = ../MLHeadPositionSmoother.h; sourceTree = "<group>"; };
+		83593CB5C828A4E2E987BEE8 /* MLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLAppDelegate.m; sourceTree = "<group>"; };
+		83593CEBC66E28299C2638D5 /* MLHeadPositionDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLHeadPositionDetector.m; sourceTree = "<group>"; };
+		83593EC8DD7AE05516DEB0E7 /* MLOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLOverlayView.h; sourceTree = "<group>"; };
+		CA0D731F1819D447007F68CE /* libOpenNI.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libOpenNI.dylib; sourceTree = "<group>"; };
 		CA24CA5918171395008E9E0F /* MonaLisaMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonaLisaMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA24CA5C18171395008E9E0F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CA24CA5F18171395008E9E0F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -41,8 +64,6 @@
 		CA24CA6818171395008E9E0F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CA24CA6A18171395008E9E0F /* MonaLisaMac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MonaLisaMac-Prefix.pch"; sourceTree = "<group>"; };
 		CA24CA6C18171395008E9E0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		CA24CA6E18171395008E9E0F /* MLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLAppDelegate.h; sourceTree = "<group>"; };
-		CA24CA6F18171395008E9E0F /* MLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLAppDelegate.m; sourceTree = "<group>"; };
 		CA24CA7218171395008E9E0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		CA24CA7418171395008E9E0F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CA24CA7A18171396008E9E0F /* MonaLisaMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonaLisaMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +71,13 @@
 		CA24CA8218171396008E9E0F /* MonaLisaMacTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MonaLisaMacTests-Info.plist"; sourceTree = "<group>"; };
 		CA24CA8418171396008E9E0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CA24CA8618171396008E9E0F /* MonaLisaMacTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonaLisaMacTests.m; sourceTree = "<group>"; };
+		CA4FDC47181889D30093B11E /* MLVideoPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLVideoPreviewViewController.h; path = "View Controllers/MLVideoPreviewViewController.h"; sourceTree = "<group>"; };
+		CA4FDC48181889D30093B11E /* MLVideoPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLVideoPreviewViewController.m; path = "View Controllers/MLVideoPreviewViewController.m"; sourceTree = "<group>"; };
+		CA4FDC49181889D30093B11E /* MLVideoPreviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MLVideoPreviewView.xib; path = "View Controllers/MLVideoPreviewView.xib"; sourceTree = "<group>"; };
+		CABA66C71817168200793230 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		CABA66CA181716D100793230 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CABA66CC181716E800793230 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		CABA66CF1817170400793230 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +85,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA2E0EFA18172C86000F7B06 /* CoreGraphics.framework in Frameworks */,
+				CA0D73201819D447007F68CE /* libOpenNI.dylib in Frameworks */,
+				CABA66D11817172000793230 /* CoreMedia.framework in Frameworks */,
+				CABA66D01817170400793230 /* QuartzCore.framework in Frameworks */,
+				CABA66CE181716FE00793230 /* AVFoundation.framework in Frameworks */,
 				CA24CA5D18171395008E9E0F /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CABA66C81817168200793230 /* AVFoundation.framework in Frameworks */,
 				CA24CA7D18171396008E9E0F /* Cocoa.framework in Frameworks */,
 				CA24CA7C18171396008E9E0F /* XCTest.framework in Frameworks */,
 			);
@@ -73,12 +107,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		835935A8C6CC4E12439F8695 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				8359331C1DB2A4F7D8832EB3 /* MLAppDelegate.h */,
+				83593CB5C828A4E2E987BEE8 /* MLAppDelegate.m */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		83593C2FEE8F4020DE52822F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				835937E43E3BB91ED061F611 /* MLOverlayView.m */,
+				83593EC8DD7AE05516DEB0E7 /* MLOverlayView.h */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		83593D07277D6BFF56C44336 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8359384685875DC57C6F5E47 /* MLHeadPosition.m */,
+				8359382663A0D01AF1101B2E /* MLHeadPosition.h */,
+				83593AFC349F47A855DA10CD /* MLHeadPositionSmoother.h */,
+				835938665B1768F8B576D558 /* MLHeadPositionSmoother.m */,
+				8359377198F49F3D8D4B83FA /* MLHeadPositionDetector.h */,
+				83593CEBC66E28299C2638D5 /* MLHeadPositionDetector.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CA0D731E1819D43C007F68CE /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				CA0D731F1819D447007F68CE /* libOpenNI.dylib */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		CA0D73211819D44E007F68CE /* OpenNI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = OpenNI;
+			sourceTree = "<group>";
+		};
 		CA24CA5018171395008E9E0F = {
 			isa = PBXGroup;
 			children = (
 				CA24CA6218171395008E9E0F /* MonaLisaMac */,
 				CA24CA8018171396008E9E0F /* MonaLisaMacTests */,
 				CA24CA5B18171395008E9E0F /* Frameworks */,
+				CA0D731E1819D43C007F68CE /* Libraries */,
 				CA24CA5A18171395008E9E0F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +176,10 @@
 		CA24CA5B18171395008E9E0F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CABA66CF1817170400793230 /* QuartzCore.framework */,
+				CABA66CC181716E800793230 /* CoreMedia.framework */,
+				CABA66CA181716D100793230 /* CoreGraphics.framework */,
+				CABA66C71817168200793230 /* AVFoundation.framework */,
 				CA24CA5C18171395008E9E0F /* Cocoa.framework */,
 				CA24CA7B18171396008E9E0F /* XCTest.framework */,
 				CA24CA5E18171395008E9E0F /* Other Frameworks */,
@@ -115,11 +200,14 @@
 		CA24CA6218171395008E9E0F /* MonaLisaMac */ = {
 			isa = PBXGroup;
 			children = (
-				CA24CA6E18171395008E9E0F /* MLAppDelegate.h */,
-				CA24CA6F18171395008E9E0F /* MLAppDelegate.m */,
+				CA0D73211819D44E007F68CE /* OpenNI */,
+				835935A8C6CC4E12439F8695 /* App Delegate */,
+				CA4FDC461818898E0093B11E /* View Controllers */,
+				83593C2FEE8F4020DE52822F /* Views */,
+				83593D07277D6BFF56C44336 /* Models */,
+				CA24CA6318171395008E9E0F /* Supporting Files */,
 				CA24CA7118171395008E9E0F /* MainMenu.xib */,
 				CA24CA7418171395008E9E0F /* Images.xcassets */,
-				CA24CA6318171395008E9E0F /* Supporting Files */,
 			);
 			path = MonaLisaMac;
 			sourceTree = "<group>";
@@ -152,6 +240,16 @@
 				CA24CA8318171396008E9E0F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CA4FDC461818898E0093B11E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CA4FDC47181889D30093B11E /* MLVideoPreviewViewController.h */,
+				CA4FDC48181889D30093B11E /* MLVideoPreviewViewController.m */,
+				CA4FDC49181889D30093B11E /* MLVideoPreviewView.xib */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +329,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA4FDC4B181889D30093B11E /* MLVideoPreviewView.xib in Resources */,
 				CA24CA6718171395008E9E0F /* InfoPlist.strings in Resources */,
 				CA24CA7518171395008E9E0F /* Images.xcassets in Resources */,
 				CA24CA6D18171395008E9E0F /* Credits.rtf in Resources */,
@@ -254,7 +353,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA24CA6918171395008E9E0F /* main.m in Sources */,
-				CA24CA7018171395008E9E0F /* MLAppDelegate.m in Sources */,
+				835933FB27E268347F56BEC9 /* MLHeadPositionSmoother.m in Sources */,
+				83593839ED7468B95E1ACCFC /* MLAppDelegate.m in Sources */,
+				835934703115F5C169E7C384 /* MLOverlayView.m in Sources */,
+				CA4FDC4A181889D30093B11E /* MLVideoPreviewViewController.m in Sources */,
+				83593D192663CA55B043F319 /* MLHeadPosition.m in Sources */,
+				835931214B871A85F74E15C3 /* MLHeadPositionDetector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +492,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MonaLisaMac/MonaLisaMac-Prefix.pch";
 				INFOPLIST_FILE = "MonaLisaMac/MonaLisaMac-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/brandon/Dropbox/Projects/MonaLisaMac,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -401,6 +510,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MonaLisaMac/MonaLisaMac-Prefix.pch";
 				INFOPLIST_FILE = "MonaLisaMac/MonaLisaMac-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/brandon/Dropbox/Projects/MonaLisaMac,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -422,6 +536,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "MonaLisaMacTests/MonaLisaMacTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -440,6 +555,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MonaLisaMac/MonaLisaMac-Prefix.pch";
 				INFOPLIST_FILE = "MonaLisaMacTests/MonaLisaMacTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -465,6 +581,7 @@
 				CA24CA8C18171396008E9E0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CA24CA8D18171396008E9E0F /* Build configuration list for PBXNativeTarget "MonaLisaMacTests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +590,7 @@
 				CA24CA8F18171396008E9E0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
