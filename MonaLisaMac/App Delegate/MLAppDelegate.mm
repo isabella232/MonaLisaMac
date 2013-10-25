@@ -69,6 +69,7 @@
     self.monaLisaWindowController = [[MLMonaLisaWindowController alloc] initWithWindowNibName:@"MLMonaLisaWindow"];
     [self.monaLisaWindowController showWindow:nil];
     [self.monaLisaWindowController.window makeMainWindow];
+    [self.monaLisaWindowController.window toggleFullScreen:nil];
 }
 
 @end
