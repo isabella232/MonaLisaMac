@@ -24,7 +24,7 @@
                 <subviews>
                     <imageView autoresizesSubviews="NO" wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="HHK-y6-2Ed" userLabel="Mona Lisa Image View">
                         <rect key="frame" x="0.0" y="0.0" width="1080" height="1920"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="mona_lisa" id="Lql-Xy-3hm"/>
                     </imageView>
                 </subviews>

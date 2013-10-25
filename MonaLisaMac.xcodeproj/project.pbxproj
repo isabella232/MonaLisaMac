@@ -73,7 +73,7 @@
 		CA0D73821819ED44007F68CE /* MLMonaLisaWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMonaLisaWindowController.h; sourceTree = "<group>"; };
 		CA0D73831819ED44007F68CE /* MLMonaLisaWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMonaLisaWindowController.m; sourceTree = "<group>"; };
 		CA0D73841819ED44007F68CE /* MLMonaLisaWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLMonaLisaWindow.xib; sourceTree = "<group>"; };
-		CA24CA5918171395008E9E0F /* MonaLisaMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonaLisaMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA24CA5918171395008E9E0F /* Mona Lisa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mona Lisa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA24CA5C18171395008E9E0F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CA24CA5F18171395008E9E0F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		CA24CA6018171395008E9E0F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -212,7 +212,7 @@
 		CA24CA5A18171395008E9E0F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CA24CA5918171395008E9E0F /* MonaLisaMac.app */,
+				CA24CA5918171395008E9E0F /* Mona Lisa.app */,
 				CA24CA7A18171396008E9E0F /* MonaLisaMacTests.xctest */,
 			);
 			name = Products;
@@ -322,7 +322,7 @@
 			);
 			name = MonaLisaMac;
 			productName = MonaLisaMac;
-			productReference = CA24CA5918171395008E9E0F /* MonaLisaMac.app */;
+			productReference = CA24CA5918171395008E9E0F /* Mona Lisa.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CA24CA7918171396008E9E0F /* MonaLisaMacTests */ = {
@@ -354,7 +354,7 @@
 				ORGANIZATIONNAME = RobotsAndPencils;
 				TargetAttributes = {
 					CA24CA7918171396008E9E0F = {
-						TestTargetID = CA24CA5818171395008E9E0F;
+						TestTargetID = CA24CA5818171395008E9E0F /* MonaLisaMac */;
 					};
 				};
 			};
@@ -594,7 +594,7 @@
 					/Users/brandon/Dropbox/Projects/MonaLisaMac/MonaLisaMac/Libraries,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Mona Lisa";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MonaLisaMac/Libraries/OpenNI\"";
 				WRAPPER_EXTENSION = app;
 			};
@@ -618,7 +618,7 @@
 					/Users/brandon/Dropbox/Projects/MonaLisaMac/MonaLisaMac/Libraries,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Mona Lisa";
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MonaLisaMac/Libraries/OpenNI\"";
 				WRAPPER_EXTENSION = app;
 			};

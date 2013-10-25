@@ -9,23 +9,12 @@
 #import "MLMonaLisaWindowController.h"
 #import "MLEyesViewController.h"
 
-static CGFloat M_PI_3 = M_PI / 3.0;
 static CGFloat M_PI_6 = M_PI / 6.0;
-
-CGFloat map(CGFloat x, CGFloat in_min, CGFloat in_max, CGFloat out_min, CGFloat out_max) {
-    return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
-}
 
 @interface MLMonaLisaWindowController ()
 
 @property (strong, nonatomic) IBOutlet NSImageView *monaLisaImageView;
-@property (strong, nonatomic) IBOutlet NSImageView *leftEyeImageView;
-@property (strong, nonatomic) IBOutlet NSImageView *rightEyeImageView;
-
 @property (strong, nonatomic) MLEyesViewController *eyesViewController;
-
-@property (nonatomic) CGPoint originalLeftEyeOrigin;
-@property (nonatomic) CGPoint originalRightEyeOrigin;
 
 @end
 
