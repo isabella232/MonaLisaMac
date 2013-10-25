@@ -12,12 +12,12 @@
 #import "NSTimer+BlocksKit.h"
 #import "Skeleton.h"
 #import "MLMonaLisaWindowController.h"
+#import "MLDepthMapWindowController.h"
 
 @interface MLAppDelegate ()
 
-@property (weak, nonatomic) IBOutlet DepthView *depthView;
-
-@property (nonatomic, strong) MLMonaLisaWindowController *monaLisaWindowController;
+@property (strong, nonatomic) MLMonaLisaWindowController *monaLisaWindowController;
+@property (strong, nonatomic) MLDepthMapWindowController *depthMapWindowController;
 
 @end
 
@@ -29,7 +29,7 @@
         if ([CocoaOpenNI sharedOpenNI].started) {
             // Sometimes we get a crash in here
             [[CocoaOpenNI sharedOpenNI] context].WaitAndUpdateAll();
-            [self.depthView setNeedsDisplay:YES];
+            [self.depthMapWindowController update];
         }
     } repeats:YES];
 
@@ -43,9 +43,15 @@
             [self.monaLisaWindowController updateEyeLocationWithHeadPosition:position];
         }
     } repeats:YES];
+
+    [self showDepthImage:nil];
+    [self showMonaLisa:nil];
 }
 
 - (IBAction)showDepthImage:(id)sender {
+    self.depthMapWindowController = [[MLDepthMapWindowController alloc] initWithWindowNibName:@"MLDepthMapWindow"];
+    [self.depthMapWindowController showWindow:nil];
+    [self.depthMapWindowController.window makeMainWindow];
 }
 
 - (IBAction)showMonaLisa:(id)sender {

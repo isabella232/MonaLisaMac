@@ -35,21 +35,29 @@ CGFloat map(CGFloat x, CGFloat in_min, CGFloat in_max, CGFloat out_min, CGFloat 
     self.eyesViewController = [[MLEyesViewController alloc] initWithNibName:@"MLEyesView" bundle:nil];
     self.eyesViewController.view.frame = CGRectMake(350, 520, 250, 150);
     [self.window.contentView addSubview:self.eyesViewController.view positioned:NSWindowBelow relativeTo:self.monaLisaImageView];
+
+    ((NSView *)self.window.contentView).layer.backgroundColor = [NSColor blackColor].CGColor;
+
+    [self resizeMonaLisaForWindowSize:self.window.frame.size];
 }
 
-- (void)awakeFromNib {
-
+- (void)windowDidExitFullScreen:(NSNotification *)notification {
+    NSWindow *window = notification.object;
+    [self resizeMonaLisaForWindowSize:window.frame.size];
 }
 
-- (NSSize)window:(NSWindow *)window willUseFullScreenContentSize:(NSSize)proposedSize {
-    CGFloat width = fmin(proposedSize.width, self.monaLisaImageView.frame.size.width);
-    CGFloat height = fmin(proposedSize.height, self.monaLisaImageView.frame.size.width);
-    CGFloat x = (proposedSize.width - width) / 2;
-    CGFloat y = (proposedSize.height - height) / 2;
+- (NSSize)windowWillResize:(NSWindow *)sender toSize:(NSSize)windowSize {
+    [self resizeMonaLisaForWindowSize:windowSize];
+    return windowSize;
+}
+
+- (void)resizeMonaLisaForWindowSize:(NSSize)windowSize {
+    CGFloat width = fmin(windowSize.width, self.monaLisaImageView.frame.size.width);
+    CGFloat height = fmin(windowSize.height, self.monaLisaImageView.frame.size.width);
+    CGFloat x = (windowSize.width - width) / 2;
+    CGFloat y = (windowSize.height - height) / 2;
 
     self.monaLisaImageView.frame = CGRectMake(x, y, width, height);
-    
-    return proposedSize;
 }
 
 - (void)updateEyeLocationWithHeadPosition:(XnVector3D)headPosition {

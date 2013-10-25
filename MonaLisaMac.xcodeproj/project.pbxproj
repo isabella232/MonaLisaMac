@@ -30,6 +30,8 @@
 		CA24CA7D18171396008E9E0F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA24CA5C18171395008E9E0F /* Cocoa.framework */; };
 		CA24CA8518171396008E9E0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA24CA8318171396008E9E0F /* InfoPlist.strings */; };
 		CA24CA8718171396008E9E0F /* MonaLisaMacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA24CA8618171396008E9E0F /* MonaLisaMacTests.m */; };
+		CA286AAA181AEAAB00DF1D70 /* MLDepthMapWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA286AA9181AEAAB00DF1D70 /* MLDepthMapWindowController.m */; };
+		CA286AAC181AEABC00DF1D70 /* MLDepthMapWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA286AAB181AEABC00DF1D70 /* MLDepthMapWindow.xib */; };
 		CA2E0EFA18172C86000F7B06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA66CA181716D100793230 /* CoreGraphics.framework */; };
 		CA9ADE5C181A254C00EC8A34 /* MLEyesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9ADE5A181A254C00EC8A34 /* MLEyesViewController.m */; };
 		CA9ADE5D181A254C00EC8A34 /* MLEyesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9ADE5B181A254C00EC8A34 /* MLEyesView.xib */; };
@@ -88,6 +90,9 @@
 		CA24CA8218171396008E9E0F /* MonaLisaMacTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MonaLisaMacTests-Info.plist"; sourceTree = "<group>"; };
 		CA24CA8418171396008E9E0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CA24CA8618171396008E9E0F /* MonaLisaMacTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonaLisaMacTests.m; sourceTree = "<group>"; };
+		CA286AA8181AEAAB00DF1D70 /* MLDepthMapWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLDepthMapWindowController.h; sourceTree = "<group>"; };
+		CA286AA9181AEAAB00DF1D70 /* MLDepthMapWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLDepthMapWindowController.m; sourceTree = "<group>"; };
+		CA286AAB181AEABC00DF1D70 /* MLDepthMapWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLDepthMapWindow.xib; sourceTree = "<group>"; };
 		CA9ADE59181A254C00EC8A34 /* MLEyesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLEyesViewController.h; sourceTree = "<group>"; };
 		CA9ADE5A181A254C00EC8A34 /* MLEyesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLEyesViewController.m; sourceTree = "<group>"; };
 		CA9ADE5B181A254C00EC8A34 /* MLEyesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLEyesView.xib; sourceTree = "<group>"; };
@@ -182,6 +187,9 @@
 		CA0D73871819ED4B007F68CE /* Window Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CA286AA8181AEAAB00DF1D70 /* MLDepthMapWindowController.h */,
+				CA286AA9181AEAAB00DF1D70 /* MLDepthMapWindowController.m */,
+				CA286AAB181AEABC00DF1D70 /* MLDepthMapWindow.xib */,
 				CA0D73821819ED44007F68CE /* MLMonaLisaWindowController.h */,
 				CA0D73831819ED44007F68CE /* MLMonaLisaWindowController.m */,
 				CA0D73841819ED44007F68CE /* MLMonaLisaWindow.xib */,
@@ -375,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA24CA6718171395008E9E0F /* InfoPlist.strings in Resources */,
+				CA286AAC181AEABC00DF1D70 /* MLDepthMapWindow.xib in Resources */,
 				CA0D73861819ED44007F68CE /* MLMonaLisaWindow.xib in Resources */,
 				CA24CA7518171395008E9E0F /* Images.xcassets in Resources */,
 				CA24CA6D18171395008E9E0F /* Credits.rtf in Resources */,
@@ -437,6 +446,7 @@
 				83593839ED7468B95E1ACCFC /* MLAppDelegate.mm in Sources */,
 				CA0D73301819D4E7007F68CE /* XnVector3DUtils.cc in Sources */,
 				CA9ADE5C181A254C00EC8A34 /* MLEyesViewController.m in Sources */,
+				CA286AAA181AEAAB00DF1D70 /* MLDepthMapWindowController.m in Sources */,
 				CA0D732E1819D4E7007F68CE /* CocoaOpenNI.mm in Sources */,
 				83593C3E23BFB733366F9276 /* Skeleton.mm in Sources */,
 				83593B80441ACF6CB4101E45 /* DepthView.mm in Sources */,
