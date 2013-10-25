@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		835931214B871A85F74E15C3 /* MLHeadPositionDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 83593CEBC66E28299C2638D5 /* MLHeadPositionDetector.m */; };
-		835933FB27E268347F56BEC9 /* MLHeadPositionSmoother.m in Sources */ = {isa = PBXBuildFile; fileRef = 835938665B1768F8B576D558 /* MLHeadPositionSmoother.m */; };
-		835934703115F5C169E7C384 /* MLOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 835937E43E3BB91ED061F611 /* MLOverlayView.m */; };
-		83593839ED7468B95E1ACCFC /* MLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83593CB5C828A4E2E987BEE8 /* MLAppDelegate.m */; };
-		83593D192663CA55B043F319 /* MLHeadPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 8359384685875DC57C6F5E47 /* MLHeadPosition.m */; };
-		CA0D73201819D447007F68CE /* libOpenNI.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0D731F1819D447007F68CE /* libOpenNI.dylib */; };
+		05BA06F7198E4A139E0566C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 132DCC2CEE7B432CBBB7B5D9 /* libPods.a */; };
+		83593839ED7468B95E1ACCFC /* MLAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83593CB5C828A4E2E987BEE8 /* MLAppDelegate.mm */; };
+		8359389098312A22CC448739 /* SceneDrawer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83593678CAD4029D9F936C24 /* SceneDrawer.mm */; };
+		8359397EB1DC6787BE5201E7 /* KinectConfig.xml in Resources */ = {isa = PBXBuildFile; fileRef = 83593AE761418FCD9752C419 /* KinectConfig.xml */; };
+		83593B80441ACF6CB4101E45 /* DepthView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83593478A335E84602FFD175 /* DepthView.mm */; };
+		83593C3E23BFB733366F9276 /* Skeleton.mm in Sources */ = {isa = PBXBuildFile; fileRef = 835933564A994BAE9E63656F /* Skeleton.mm */; };
+		CA0D732E1819D4E7007F68CE /* CocoaOpenNI.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA0D73271819D4E7007F68CE /* CocoaOpenNI.mm */; };
+		CA0D73301819D4E7007F68CE /* XnVector3DUtils.cc in Sources */ = {isa = PBXBuildFile; fileRef = CA0D732B1819D4E7007F68CE /* XnVector3DUtils.cc */; };
+		CA0D73781819DBD4007F68CE /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0D73771819DBD4007F68CE /* OpenGL.framework */; };
+		CA0D737A1819DBE0007F68CE /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0D73791819DBE0007F68CE /* GLUT.framework */; };
+		CA0D737B1819DC36007F68CE /* libOpenNI.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0D73341819D67A007F68CE /* libOpenNI.dylib */; };
+		CA0D73851819ED44007F68CE /* MLMonaLisaWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0D73831819ED44007F68CE /* MLMonaLisaWindowController.m */; };
+		CA0D73861819ED44007F68CE /* MLMonaLisaWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA0D73841819ED44007F68CE /* MLMonaLisaWindow.xib */; };
 		CA24CA5D18171395008E9E0F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA24CA5C18171395008E9E0F /* Cocoa.framework */; };
 		CA24CA6718171395008E9E0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA24CA6518171395008E9E0F /* InfoPlist.strings */; };
 		CA24CA6918171395008E9E0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA24CA6818171395008E9E0F /* main.m */; };
@@ -24,8 +31,9 @@
 		CA24CA8518171396008E9E0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA24CA8318171396008E9E0F /* InfoPlist.strings */; };
 		CA24CA8718171396008E9E0F /* MonaLisaMacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA24CA8618171396008E9E0F /* MonaLisaMacTests.m */; };
 		CA2E0EFA18172C86000F7B06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA66CA181716D100793230 /* CoreGraphics.framework */; };
-		CA4FDC4A181889D30093B11E /* MLVideoPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4FDC48181889D30093B11E /* MLVideoPreviewViewController.m */; };
-		CA4FDC4B181889D30093B11E /* MLVideoPreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA4FDC49181889D30093B11E /* MLVideoPreviewView.xib */; };
+		CA9ADE5C181A254C00EC8A34 /* MLEyesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9ADE5A181A254C00EC8A34 /* MLEyesViewController.m */; };
+		CA9ADE5D181A254C00EC8A34 /* MLEyesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9ADE5B181A254C00EC8A34 /* MLEyesView.xib */; };
+		CA9ADE60181A258400EC8A34 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9ADE5F181A258400EC8A34 /* SceneKit.framework */; };
 		CABA66C81817168200793230 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA66C71817168200793230 /* AVFoundation.framework */; };
 		CABA66CE181716FE00793230 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA66C71817168200793230 /* AVFoundation.framework */; };
 		CABA66D01817170400793230 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA66CF1817170400793230 /* QuartzCore.framework */; };
@@ -43,17 +51,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		132DCC2CEE7B432CBBB7B5D9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8359331AA8738D2F48FF0A7F /* Skeleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Skeleton.h; sourceTree = SOURCE_ROOT; };
 		8359331C1DB2A4F7D8832EB3 /* MLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAppDelegate.h; sourceTree = "<group>"; };
-		8359377198F49F3D8D4B83FA /* MLHeadPositionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLHeadPositionDetector.h; sourceTree = "<group>"; };
-		835937E43E3BB91ED061F611 /* MLOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLOverlayView.m; sourceTree = "<group>"; };
-		8359382663A0D01AF1101B2E /* MLHeadPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLHeadPosition.h; sourceTree = "<group>"; };
-		8359384685875DC57C6F5E47 /* MLHeadPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLHeadPosition.m; sourceTree = "<group>"; };
-		835938665B1768F8B576D558 /* MLHeadPositionSmoother.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLHeadPositionSmoother.m; path = ../MLHeadPositionSmoother.m; sourceTree = "<group>"; };
-		83593AFC349F47A855DA10CD /* MLHeadPositionSmoother.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLHeadPositionSmoother.h; path = ../MLHeadPositionSmoother.h; sourceTree = "<group>"; };
-		83593CB5C828A4E2E987BEE8 /* MLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLAppDelegate.m; sourceTree = "<group>"; };
-		83593CEBC66E28299C2638D5 /* MLHeadPositionDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLHeadPositionDetector.m; sourceTree = "<group>"; };
-		83593EC8DD7AE05516DEB0E7 /* MLOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLOverlayView.h; sourceTree = "<group>"; };
-		CA0D731F1819D447007F68CE /* libOpenNI.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libOpenNI.dylib; sourceTree = "<group>"; };
+		835933564A994BAE9E63656F /* Skeleton.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Skeleton.mm; sourceTree = SOURCE_ROOT; };
+		83593478A335E84602FFD175 /* DepthView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DepthView.mm; sourceTree = SOURCE_ROOT; };
+		83593678CAD4029D9F936C24 /* SceneDrawer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SceneDrawer.mm; sourceTree = SOURCE_ROOT; };
+		83593926480F0CE1EB403A13 /* SceneDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDrawer.h; sourceTree = SOURCE_ROOT; };
+		83593ADCEE579514DBD142EC /* DepthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DepthView.h; sourceTree = SOURCE_ROOT; };
+		83593AE761418FCD9752C419 /* KinectConfig.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = KinectConfig.xml; sourceTree = "<group>"; };
+		83593CB5C828A4E2E987BEE8 /* MLAppDelegate.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = MLAppDelegate.mm; sourceTree = "<group>"; };
+		CA0D73261819D4E7007F68CE /* CocoaOpenNI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaOpenNI.h; sourceTree = "<group>"; };
+		CA0D73271819D4E7007F68CE /* CocoaOpenNI.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CocoaOpenNI.mm; sourceTree = "<group>"; };
+		CA0D732A1819D4E7007F68CE /* XnVector3DUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XnVector3DUtils.h; sourceTree = "<group>"; };
+		CA0D732B1819D4E7007F68CE /* XnVector3DUtils.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = XnVector3DUtils.cc; sourceTree = "<group>"; };
+		CA0D73341819D67A007F68CE /* libOpenNI.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libOpenNI.dylib; sourceTree = "<group>"; };
+		CA0D73771819DBD4007F68CE /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		CA0D73791819DBE0007F68CE /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		CA0D73821819ED44007F68CE /* MLMonaLisaWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMonaLisaWindowController.h; sourceTree = "<group>"; };
+		CA0D73831819ED44007F68CE /* MLMonaLisaWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMonaLisaWindowController.m; sourceTree = "<group>"; };
+		CA0D73841819ED44007F68CE /* MLMonaLisaWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLMonaLisaWindow.xib; sourceTree = "<group>"; };
 		CA24CA5918171395008E9E0F /* MonaLisaMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonaLisaMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA24CA5C18171395008E9E0F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CA24CA5F18171395008E9E0F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -71,13 +88,15 @@
 		CA24CA8218171396008E9E0F /* MonaLisaMacTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MonaLisaMacTests-Info.plist"; sourceTree = "<group>"; };
 		CA24CA8418171396008E9E0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CA24CA8618171396008E9E0F /* MonaLisaMacTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MonaLisaMacTests.m; sourceTree = "<group>"; };
-		CA4FDC47181889D30093B11E /* MLVideoPreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLVideoPreviewViewController.h; path = "View Controllers/MLVideoPreviewViewController.h"; sourceTree = "<group>"; };
-		CA4FDC48181889D30093B11E /* MLVideoPreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLVideoPreviewViewController.m; path = "View Controllers/MLVideoPreviewViewController.m"; sourceTree = "<group>"; };
-		CA4FDC49181889D30093B11E /* MLVideoPreviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MLVideoPreviewView.xib; path = "View Controllers/MLVideoPreviewView.xib"; sourceTree = "<group>"; };
+		CA9ADE59181A254C00EC8A34 /* MLEyesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLEyesViewController.h; sourceTree = "<group>"; };
+		CA9ADE5A181A254C00EC8A34 /* MLEyesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLEyesViewController.m; sourceTree = "<group>"; };
+		CA9ADE5B181A254C00EC8A34 /* MLEyesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLEyesView.xib; sourceTree = "<group>"; };
+		CA9ADE5F181A258400EC8A34 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		CABA66C71817168200793230 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CABA66CA181716D100793230 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CABA66CC181716E800793230 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		CABA66CF1817170400793230 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E79CA963ACAD42449A2E3BB0 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +104,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA9ADE60181A258400EC8A34 /* SceneKit.framework in Frameworks */,
+				CA0D737A1819DBE0007F68CE /* GLUT.framework in Frameworks */,
+				CA0D73781819DBD4007F68CE /* OpenGL.framework in Frameworks */,
 				CA2E0EFA18172C86000F7B06 /* CoreGraphics.framework in Frameworks */,
-				CA0D73201819D447007F68CE /* libOpenNI.dylib in Frameworks */,
 				CABA66D11817172000793230 /* CoreMedia.framework in Frameworks */,
 				CABA66D01817170400793230 /* QuartzCore.framework in Frameworks */,
 				CABA66CE181716FE00793230 /* AVFoundation.framework in Frameworks */,
 				CA24CA5D18171395008E9E0F /* Cocoa.framework in Frameworks */,
+				CA0D737B1819DC36007F68CE /* libOpenNI.dylib in Frameworks */,
+				05BA06F7198E4A139E0566C1 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				8359331C1DB2A4F7D8832EB3 /* MLAppDelegate.h */,
-				83593CB5C828A4E2E987BEE8 /* MLAppDelegate.m */,
+				83593CB5C828A4E2E987BEE8 /* MLAppDelegate.mm */,
 			);
 			path = "App Delegate";
 			sourceTree = "<group>";
@@ -119,8 +142,10 @@
 		83593C2FEE8F4020DE52822F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				835937E43E3BB91ED061F611 /* MLOverlayView.m */,
-				83593EC8DD7AE05516DEB0E7 /* MLOverlayView.h */,
+				83593ADCEE579514DBD142EC /* DepthView.h */,
+				83593478A335E84602FFD175 /* DepthView.mm */,
+				83593926480F0CE1EB403A13 /* SceneDrawer.h */,
+				83593678CAD4029D9F936C24 /* SceneDrawer.mm */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -128,39 +153,51 @@
 		83593D07277D6BFF56C44336 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				8359384685875DC57C6F5E47 /* MLHeadPosition.m */,
-				8359382663A0D01AF1101B2E /* MLHeadPosition.h */,
-				83593AFC349F47A855DA10CD /* MLHeadPositionSmoother.h */,
-				835938665B1768F8B576D558 /* MLHeadPositionSmoother.m */,
-				8359377198F49F3D8D4B83FA /* MLHeadPositionDetector.h */,
-				83593CEBC66E28299C2638D5 /* MLHeadPositionDetector.m */,
+				8359331AA8738D2F48FF0A7F /* Skeleton.h */,
+				835933564A994BAE9E63656F /* Skeleton.mm */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		CA0D731E1819D43C007F68CE /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				CA0D731F1819D447007F68CE /* libOpenNI.dylib */,
-			);
-			name = Libraries;
 			sourceTree = "<group>";
 		};
 		CA0D73211819D44E007F68CE /* OpenNI */ = {
 			isa = PBXGroup;
 			children = (
+				CA0D73261819D4E7007F68CE /* CocoaOpenNI.h */,
+				CA0D73271819D4E7007F68CE /* CocoaOpenNI.mm */,
+				CA0D732A1819D4E7007F68CE /* XnVector3DUtils.h */,
+				CA0D732B1819D4E7007F68CE /* XnVector3DUtils.cc */,
 			);
 			name = OpenNI;
+			sourceTree = "<group>";
+		};
+		CA0D73331819D67A007F68CE /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				CA0D73341819D67A007F68CE /* libOpenNI.dylib */,
+			);
+			name = Libraries;
+			path = MonaLisaMac/Libraries;
+			sourceTree = "<group>";
+		};
+		CA0D73871819ED4B007F68CE /* Window Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CA0D73821819ED44007F68CE /* MLMonaLisaWindowController.h */,
+				CA0D73831819ED44007F68CE /* MLMonaLisaWindowController.m */,
+				CA0D73841819ED44007F68CE /* MLMonaLisaWindow.xib */,
+			);
+			name = "Window Controllers";
 			sourceTree = "<group>";
 		};
 		CA24CA5018171395008E9E0F = {
 			isa = PBXGroup;
 			children = (
 				CA24CA6218171395008E9E0F /* MonaLisaMac */,
+				CA0D73331819D67A007F68CE /* Libraries */,
 				CA24CA8018171396008E9E0F /* MonaLisaMacTests */,
 				CA24CA5B18171395008E9E0F /* Frameworks */,
-				CA0D731E1819D43C007F68CE /* Libraries */,
 				CA24CA5A18171395008E9E0F /* Products */,
+				E79CA963ACAD42449A2E3BB0 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,6 +213,9 @@
 		CA24CA5B18171395008E9E0F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA9ADE5F181A258400EC8A34 /* SceneKit.framework */,
+				CA0D73791819DBE0007F68CE /* GLUT.framework */,
+				CA0D73771819DBD4007F68CE /* OpenGL.framework */,
 				CABA66CF1817170400793230 /* QuartzCore.framework */,
 				CABA66CC181716E800793230 /* CoreMedia.framework */,
 				CABA66CA181716D100793230 /* CoreGraphics.framework */,
@@ -183,6 +223,7 @@
 				CA24CA5C18171395008E9E0F /* Cocoa.framework */,
 				CA24CA7B18171396008E9E0F /* XCTest.framework */,
 				CA24CA5E18171395008E9E0F /* Other Frameworks */,
+				132DCC2CEE7B432CBBB7B5D9 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -200,9 +241,10 @@
 		CA24CA6218171395008E9E0F /* MonaLisaMac */ = {
 			isa = PBXGroup;
 			children = (
+				CA9ADE5E181A255500EC8A34 /* View Controllers */,
+				CA0D73871819ED4B007F68CE /* Window Controllers */,
 				CA0D73211819D44E007F68CE /* OpenNI */,
 				835935A8C6CC4E12439F8695 /* App Delegate */,
-				CA4FDC461818898E0093B11E /* View Controllers */,
 				83593C2FEE8F4020DE52822F /* Views */,
 				83593D07277D6BFF56C44336 /* Models */,
 				CA24CA6318171395008E9E0F /* Supporting Files */,
@@ -220,6 +262,7 @@
 				CA24CA6818171395008E9E0F /* main.m */,
 				CA24CA6A18171395008E9E0F /* MonaLisaMac-Prefix.pch */,
 				CA24CA6B18171395008E9E0F /* Credits.rtf */,
+				83593AE761418FCD9752C419 /* KinectConfig.xml */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -242,12 +285,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CA4FDC461818898E0093B11E /* View Controllers */ = {
+		CA9ADE5E181A255500EC8A34 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CA4FDC47181889D30093B11E /* MLVideoPreviewViewController.h */,
-				CA4FDC48181889D30093B11E /* MLVideoPreviewViewController.m */,
-				CA4FDC49181889D30093B11E /* MLVideoPreviewView.xib */,
+				CA9ADE59181A254C00EC8A34 /* MLEyesViewController.h */,
+				CA9ADE5A181A254C00EC8A34 /* MLEyesViewController.m */,
+				CA9ADE5B181A254C00EC8A34 /* MLEyesView.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -259,9 +302,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA24CA8A18171396008E9E0F /* Build configuration list for PBXNativeTarget "MonaLisaMac" */;
 			buildPhases = (
+				7C677B0F69C14A32B0361CA0 /* Check Pods Manifest.lock */,
 				CA24CA5518171395008E9E0F /* Sources */,
 				CA24CA5618171395008E9E0F /* Frameworks */,
 				CA24CA5718171395008E9E0F /* Resources */,
+				33BB7A48B0E243C888CA64E2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -329,11 +374,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA4FDC4B181889D30093B11E /* MLVideoPreviewView.xib in Resources */,
 				CA24CA6718171395008E9E0F /* InfoPlist.strings in Resources */,
+				CA0D73861819ED44007F68CE /* MLMonaLisaWindow.xib in Resources */,
 				CA24CA7518171395008E9E0F /* Images.xcassets in Resources */,
 				CA24CA6D18171395008E9E0F /* Credits.rtf in Resources */,
 				CA24CA7318171395008E9E0F /* MainMenu.xib in Resources */,
+				CA9ADE5D181A254C00EC8A34 /* MLEyesView.xib in Resources */,
+				8359397EB1DC6787BE5201E7 /* KinectConfig.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,18 +394,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		33BB7A48B0E243C888CA64E2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C677B0F69C14A32B0361CA0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CA24CA5518171395008E9E0F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA0D73851819ED44007F68CE /* MLMonaLisaWindowController.m in Sources */,
 				CA24CA6918171395008E9E0F /* main.m in Sources */,
-				835933FB27E268347F56BEC9 /* MLHeadPositionSmoother.m in Sources */,
-				83593839ED7468B95E1ACCFC /* MLAppDelegate.m in Sources */,
-				835934703115F5C169E7C384 /* MLOverlayView.m in Sources */,
-				CA4FDC4A181889D30093B11E /* MLVideoPreviewViewController.m in Sources */,
-				83593D192663CA55B043F319 /* MLHeadPosition.m in Sources */,
-				835931214B871A85F74E15C3 /* MLHeadPositionDetector.m in Sources */,
+				83593839ED7468B95E1ACCFC /* MLAppDelegate.mm in Sources */,
+				CA0D73301819D4E7007F68CE /* XnVector3DUtils.cc in Sources */,
+				CA9ADE5C181A254C00EC8A34 /* MLEyesViewController.m in Sources */,
+				CA0D732E1819D4E7007F68CE /* CocoaOpenNI.mm in Sources */,
+				83593C3E23BFB733366F9276 /* Skeleton.mm in Sources */,
+				83593B80441ACF6CB4101E45 /* DepthView.mm in Sources */,
+				8359389098312A22CC448739 /* SceneDrawer.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,36 +568,48 @@
 		};
 		CA24CA8B18171396008E9E0F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E79CA963ACAD42449A2E3BB0 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MonaLisaMac/MonaLisaMac-Prefix.pch";
 				INFOPLIST_FILE = "MonaLisaMac/MonaLisaMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/brandon/Dropbox/Projects/MonaLisaMac,
+					"\\\"$(SRCROOT)/MonaLisaMac/Libraries\\\"",
+					/Users/brandon/Dropbox/Projects/MonaLisaMac/MonaLisaMac/Libraries,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MonaLisaMac/Libraries/OpenNI\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		CA24CA8C18171396008E9E0F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E79CA963ACAD42449A2E3BB0 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MonaLisaMac/MonaLisaMac-Prefix.pch";
 				INFOPLIST_FILE = "MonaLisaMac/MonaLisaMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/brandon/Dropbox/Projects/MonaLisaMac,
+					"\\\"$(SRCROOT)/MonaLisaMac/Libraries\\\"",
+					/Users/brandon/Dropbox/Projects/MonaLisaMac/MonaLisaMac/Libraries,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/MonaLisaMac/Libraries/OpenNI\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

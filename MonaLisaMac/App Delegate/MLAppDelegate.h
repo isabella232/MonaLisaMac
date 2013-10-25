@@ -8,9 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class AVCaptureVideoPreviewLayer;
-@class MLHeadPositionDetector;
-
 @interface MLAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;

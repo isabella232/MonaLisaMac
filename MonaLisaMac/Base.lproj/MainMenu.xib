@@ -88,6 +88,19 @@
                                     <action selector="performZoom:" target="-1" id="240"/>
                                 </connections>
                             </menuItem>
+                            <menuItem isSeparatorItem="YES" id="XwI-2A-gVa"/>
+                            <menuItem title="Show Depth Image" id="JvV-JC-lSZ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="showDepthImage:" target="494" id="5ZN-KN-wQi"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show Mona Lisa" id="4Wa-3y-6im">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="showMonaLisa:" target="494" id="7Dl-dq-zAv"/>
+                                </connections>
+                            </menuItem>
                             <menuItem isSeparatorItem="YES" id="92">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
@@ -103,44 +116,29 @@
         </menu>
         <window title="MonaLisaMac" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-            <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="1003" height="736"/>
+            <rect key="contentRect" x="348" y="175" width="640" height="480"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" id="372">
-                <rect key="frame" x="0.0" y="0.0" width="1003" height="736"/>
+                <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RI5-Ab-nF6" userLabel="Mona Lisa Image View">
-                        <rect key="frame" x="488" y="0.0" width="515" height="736"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="mona_lisa" id="oFt-8G-6nc"/>
-                    </imageView>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gnD-wq-xhW" userLabel="Left Eye Image View">
-                        <rect key="frame" x="682" y="558" width="26" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="eye" id="URV-xY-vMV"/>
-                    </imageView>
-                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qrb-sJ-afj" userLabel="Right Eye Image View">
-                        <rect key="frame" x="733" y="558" width="26" height="18"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="eye" id="K0W-Y9-cYb"/>
-                    </imageView>
+                    <customView autoresizesSubviews="NO" wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RJw-pT-USY" customClass="DepthView">
+                        <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </customView>
                 </subviews>
             </view>
+            <connections>
+                <outlet property="delegate" destination="494" id="Eto-HU-OmJ"/>
+            </connections>
         </window>
         <customObject id="494" customClass="MLAppDelegate">
             <connections>
-                <outlet property="leftEyeImageView" destination="gnD-wq-xhW" id="A4C-RE-kSs"/>
-                <outlet property="monaLisaImageView" destination="RI5-Ab-nF6" id="wSy-Uy-YCJ"/>
-                <outlet property="rightEyeImageView" destination="Qrb-sJ-afj" id="vhx-Jb-BZv"/>
+                <outlet property="depthView" destination="RJw-pT-USY" id="k5x-hv-w3l"/>
                 <outlet property="window" destination="371" id="532"/>
             </connections>
         </customObject>
         <customObject id="420" customClass="NSFontManager"/>
     </objects>
-    <resources>
-        <image name="eye" width="36" height="26"/>
-        <image name="mona_lisa" width="709" height="1072"/>
-    </resources>
 </document>
