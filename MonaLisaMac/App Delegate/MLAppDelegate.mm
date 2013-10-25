@@ -11,13 +11,16 @@
 #import "DepthView.h"
 #import "NSTimer+BlocksKit.h"
 #import "Skeleton.h"
+#import "MLXnVector3DSmoother.h"
 #import "MLMonaLisaWindowController.h"
 #import "MLDepthMapWindowController.h"
+#import "MLXnVector3DSmoother.h"
 
 @interface MLAppDelegate ()
 
 @property (strong, nonatomic) MLMonaLisaWindowController *monaLisaWindowController;
 @property (strong, nonatomic) MLDepthMapWindowController *depthMapWindowController;
+@property (strong, nonatomic) MLXnVector3DSmoother *smoother;
 
 @end
 
@@ -39,6 +42,14 @@
 
         Skeleton *firstSkeleton = [CocoaOpenNI sharedOpenNI].skeletons[@(userID)];
         XnVector3D position = firstSkeleton.head.position;
+        
+        if (!self.smoother) {
+            self.smoother = [[MLXnVector3DSmoother alloc] initWithVector:position interval:0.1];
+        }
+        else {
+            position = [self.smoother smooth:position];
+        }
+        
         if (self.monaLisaWindowController) {
             [self.monaLisaWindowController updateEyeLocationWithHeadPosition:position];
         }

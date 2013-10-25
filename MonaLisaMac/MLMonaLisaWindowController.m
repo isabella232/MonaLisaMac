@@ -15,6 +15,8 @@ static CGFloat M_PI_6 = M_PI / 6.0;
 
 @property (strong, nonatomic) IBOutlet NSImageView *monaLisaImageView;
 @property (strong, nonatomic) MLEyesViewController *eyesViewController;
+@property (nonatomic) CGRect originalEyeFrame;
+@property (nonatomic) CGSize originalMonaLisaSize;
 
 @end
 
@@ -22,10 +24,14 @@ static CGFloat M_PI_6 = M_PI / 6.0;
 
 - (void)windowDidLoad {
     self.eyesViewController = [[MLEyesViewController alloc] initWithNibName:@"MLEyesView" bundle:nil];
-    self.eyesViewController.view.frame = CGRectMake(350, 520, 250, 150);
+    self.eyesViewController.view.frame = CGRectMake(350, 1360, 250, 150);
+    self.eyesViewController.view.layer.autoresizingMask = kCALayerNotSizable | kCALayerMaxXMargin;
     [self.window.contentView addSubview:self.eyesViewController.view positioned:NSWindowBelow relativeTo:self.monaLisaImageView];
 
     ((NSView *)self.window.contentView).layer.backgroundColor = [NSColor blackColor].CGColor;
+
+    self.originalEyeFrame = self.eyesViewController.view.frame;
+    self.originalMonaLisaSize = CGSizeMake(1080, 1920);
 
     [self resizeMonaLisaForWindowSize:self.window.frame.size];
 }
@@ -41,12 +47,20 @@ static CGFloat M_PI_6 = M_PI / 6.0;
 }
 
 - (void)resizeMonaLisaForWindowSize:(NSSize)windowSize {
-    CGFloat width = fmin(windowSize.width, self.monaLisaImageView.frame.size.width);
-    CGFloat height = fmin(windowSize.height, self.monaLisaImageView.frame.size.width);
-    CGFloat x = (windowSize.width - width) / 2;
-    CGFloat y = (windowSize.height - height) / 2;
+    CGFloat width = fmin(windowSize.width, self.originalMonaLisaSize.width);
+    CGFloat height = fmin(windowSize.height, self.originalMonaLisaSize.height);
 
-    self.monaLisaImageView.frame = CGRectMake(x, y, width, height);
+    CGFloat xScale = width / self.originalMonaLisaSize.width;
+    CGFloat yScale = height / self.originalMonaLisaSize.height;
+
+    CGRect newEyeFrame = self.eyesViewController.view.frame;
+    newEyeFrame.origin.x = self.originalEyeFrame.origin.x * xScale;
+    newEyeFrame.origin.y = self.originalEyeFrame.origin.y * yScale;
+    newEyeFrame.size.width = self.originalEyeFrame.size.width * xScale;
+    newEyeFrame.size.height = self.originalEyeFrame.size.height * yScale;
+    self.eyesViewController.view.frame = newEyeFrame;
+
+    self.eyesViewController.view.frame = self.originalEyeFrame;
 }
 
 - (void)updateEyeLocationWithHeadPosition:(XnVector3D)headPosition {
