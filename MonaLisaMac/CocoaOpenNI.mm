@@ -177,17 +177,15 @@ void XN_CALLBACK_TYPE UserCalibration_CalibrationComplete(xn::SkeletonCapability
     return _userGenerator;
 }
 
-- (XnUserID)firstTrackingUser {
-    XnUserID aUsers[10];
-    XnUInt16 nUsers = 10;
-    _userGenerator.GetUsers(aUsers, nUsers);
-    // The first user that's tracking will be in control
-    for (int i = 0; i < nUsers; ++i) {
-        if (_userGenerator.GetSkeletonCap().IsTracking(aUsers[i])) {
-            return aUsers[i];
-        }
+- (XnUserID)firstTrackedUser {
+    return [self trackedUserAtIndex:0];
+}
+
+- (XnUserID)trackedUserAtIndex:(NSInteger)userIndex {
+    if (userIndex >= 0 && userIndex < [[self skeletons] count]) {
+        return (XnUserID)[[self.skeletons allKeys][userIndex] integerValue];
     }
-    return NULL;
+    return INT32_MAX;
 }
 
 #pragma mark - OpenNI Callbacks

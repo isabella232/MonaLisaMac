@@ -34,7 +34,7 @@
 - (xn::DepthGenerator)depthGenerator;
 - (xn::UserGenerator)userGenerator;
 
-- (XnUserID)firstTrackingUser;
+- (XnUserID)firstTrackedUser;
 - (XnStatus)startWithConfigPath:(NSString *)configPath;
 
 + (CocoaOpenNI *)sharedOpenNI;

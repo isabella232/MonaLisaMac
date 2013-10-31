@@ -22,25 +22,39 @@
 @property (strong, nonatomic) MLDepthMapWindowController *depthMapWindowController;
 @property (strong, nonatomic) MLXnVector3DSmoother *smoother;
 
+@property (strong, nonatomic) NSTimer *changeUserTimer;
+@property (nonatomic) XnUserID currentlyTrackedUserID;
+
 @end
 
 @implementation MLAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+
+    self.currentlyTrackedUserID = INT32_MAX;
+
     [[CocoaOpenNI sharedOpenNI] startWithConfigPath:[[NSBundle mainBundle] pathForResource:@"KinectConfig" ofType:@"xml"]];
+
     [NSTimer scheduledTimerWithTimeInterval:1.0 / 30.0 block:^(NSTimer *timer){
         if ([CocoaOpenNI sharedOpenNI].started) {
             // Sometimes we get a crash in here
             [[CocoaOpenNI sharedOpenNI] context].WaitAndUpdateAll();
             [self.depthMapWindowController update];
         }
-    } repeats:YES];
 
-    [NSTimer scheduledTimerWithTimeInterval:1.0 / 30.0 block:^(NSTimer *timer){
-        XnUserID userID = [[CocoaOpenNI sharedOpenNI] firstTrackingUser];
-        if (!userID) return;
+        // Haven't found a skeleton yet or previous skeleton is invalid
+        BOOL currentSkeletonIsInvalid = ![[[CocoaOpenNI sharedOpenNI].skeletons allKeys] containsObject:@(self.currentlyTrackedUserID)];
+        if (self.currentlyTrackedUserID == INT32_MAX || currentSkeletonIsInvalid) {
+        self.currentlyTrackedUserID = [[CocoaOpenNI sharedOpenNI] firstTrackedUser];
+        }
+        if (self.currentlyTrackedUserID == INT32_MAX) return;
 
-        Skeleton *firstSkeleton = [CocoaOpenNI sharedOpenNI].skeletons[@(userID)];
+        // Schedule the self-repeating timer to loop through users
+        if (!self.changeUserTimer) {
+            [self createChangeUserTimer];
+        }
+
+        Skeleton *firstSkeleton = [CocoaOpenNI sharedOpenNI].skeletons[@(self.currentlyTrackedUserID)];
         XnVector3D position = firstSkeleton.head.position;
         
         if (!self.smoother) {
@@ -59,6 +73,8 @@
     [self showMonaLisa:nil];
 }
 
+#pragma mark - Private
+
 - (IBAction)showDepthImage:(id)sender {
     self.depthMapWindowController = [[MLDepthMapWindowController alloc] initWithWindowNibName:@"MLDepthMapWindow"];
     [self.depthMapWindowController showWindow:nil];
@@ -70,6 +86,27 @@
     [self.monaLisaWindowController showWindow:nil];
     [self.monaLisaWindowController.window makeMainWindow];
     [self.monaLisaWindowController.window toggleFullScreen:nil];
+}
+
+- (void)createChangeUserTimer {
+    NSInteger duration = 1 + arc4random_uniform(3);
+    self.changeUserTimer = [NSTimer scheduledTimerWithTimeInterval:duration block:^(NSTimer *timer) {
+
+        // Increment the userID and loop if past bounds
+        XnInt16 userCount = [[CocoaOpenNI sharedOpenNI] userGenerator].GetNumberOfUsers();
+        if (userCount == 0) {
+            self.currentlyTrackedUserID = INT32_MAX;
+            self.changeUserTimer = nil;
+            return;
+        }
+
+        ++self.currentlyTrackedUserID;
+        if (self.currentlyTrackedUserID > userCount) {
+            self.currentlyTrackedUserID = 1;
+        }
+
+        [self createChangeUserTimer];
+    } repeats:NO];
 }
 
 @end
