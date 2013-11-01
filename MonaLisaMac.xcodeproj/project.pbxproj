@@ -58,13 +58,13 @@
 
 /* Begin PBXFileReference section */
 		132DCC2CEE7B432CBBB7B5D9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8359331AA8738D2F48FF0A7F /* Skeleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Skeleton.h; sourceTree = SOURCE_ROOT; };
+		8359331AA8738D2F48FF0A7F /* Skeleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Skeleton.h; path = MonaLisaMac/Skeleton.h; sourceTree = SOURCE_ROOT; };
 		8359331C1DB2A4F7D8832EB3 /* MLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAppDelegate.h; sourceTree = "<group>"; };
-		835933564A994BAE9E63656F /* Skeleton.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Skeleton.mm; sourceTree = SOURCE_ROOT; };
-		83593478A335E84602FFD175 /* DepthView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DepthView.mm; sourceTree = SOURCE_ROOT; };
-		83593678CAD4029D9F936C24 /* SceneDrawer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SceneDrawer.mm; sourceTree = SOURCE_ROOT; };
-		83593926480F0CE1EB403A13 /* SceneDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneDrawer.h; sourceTree = SOURCE_ROOT; };
-		83593ADCEE579514DBD142EC /* DepthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DepthView.h; sourceTree = SOURCE_ROOT; };
+		835933564A994BAE9E63656F /* Skeleton.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Skeleton.mm; path = MonaLisaMac/Skeleton.mm; sourceTree = SOURCE_ROOT; };
+		83593478A335E84602FFD175 /* DepthView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = DepthView.mm; path = MonaLisaMac/DepthView.mm; sourceTree = SOURCE_ROOT; };
+		83593678CAD4029D9F936C24 /* SceneDrawer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SceneDrawer.mm; path = MonaLisaMac/SceneDrawer.mm; sourceTree = SOURCE_ROOT; };
+		83593926480F0CE1EB403A13 /* SceneDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SceneDrawer.h; path = MonaLisaMac/SceneDrawer.h; sourceTree = SOURCE_ROOT; };
+		83593ADCEE579514DBD142EC /* DepthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DepthView.h; path = MonaLisaMac/DepthView.h; sourceTree = SOURCE_ROOT; };
 		83593AE761418FCD9752C419 /* KinectConfig.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = KinectConfig.xml; sourceTree = "<group>"; };
 		83593CB5C828A4E2E987BEE8 /* MLAppDelegate.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = MLAppDelegate.mm; sourceTree = "<group>"; };
 		CA0D73261819D4E7007F68CE /* CocoaOpenNI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaOpenNI.h; sourceTree = "<group>"; };
