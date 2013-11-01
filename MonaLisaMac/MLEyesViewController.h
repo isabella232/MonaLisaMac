@@ -12,5 +12,6 @@
 
 - (void)setLeftEyeTransform:(CATransform3D)transform;
 - (void)setRightEyeTransform:(CATransform3D)transform;
+- (void)showAlternateEye:(BOOL)showAlternate;
 
 @end

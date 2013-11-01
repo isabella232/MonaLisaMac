@@ -6,8 +6,11 @@
 //  Copyright (c) 2013 RobotsAndPencils. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
 #import "MLMonaLisaWindowController.h"
 #import "MLEyesViewController.h"
+#import "NSTimer+BlocksKit.h"
+#import "NSObject+BlocksKit.h"
 
 static CGFloat M_PI_6 = M_PI / 6.0;
 
@@ -27,12 +30,17 @@ CGSize CGSizeScale(CGSize size, CGFloat xScale, CGFloat yScale) {
 
 @property (strong, nonatomic) IBOutlet NSImageView *monaLisaImageView;
 @property (strong, nonatomic) MLEyesViewController *eyesViewController;
+@property (strong, nonatomic) NSImage *normalImage;
+@property (strong, nonatomic) NSImage *alternateImage;
+@property (strong, nonatomic) NSTimer *imageFlickerTimer;
 @property (nonatomic) CGRect originalEyeFrame;
 @property (nonatomic) CGSize originalMonaLisaSize;
 
 @end
 
 @implementation MLMonaLisaWindowController
+
+#pragma mark - NSWindowController
 
 - (void)windowDidLoad {
     self.eyesViewController = [[MLEyesViewController alloc] initWithNibName:@"MLEyesView" bundle:nil];
@@ -42,12 +50,17 @@ CGSize CGSizeScale(CGSize size, CGFloat xScale, CGFloat yScale) {
     self.eyesViewController.view.layer.autoresizingMask = kCALayerNotSizable | kCALayerMaxXMargin;
     [self.window.contentView addSubview:self.eyesViewController.view positioned:NSWindowBelow relativeTo:self.monaLisaImageView];
 
+    self.normalImage = self.monaLisaImageView.image;
+    self.alternateImage = [NSImage imageNamed:@"mona_lisa_cyborg"];
+
     ((NSView *)self.window.contentView).layer.backgroundColor = [NSColor blackColor].CGColor;
 
     self.originalEyeFrame = self.eyesViewController.view.frame;
     self.originalMonaLisaSize = CGSizeMake(1080, 1920);
 
     [self resizeMonaLisaForWindowSize:self.window.frame.size];
+
+    [self scheduleImageFlicker];
 }
 
 - (void)windowDidExitFullScreen:(NSNotification *)notification {
@@ -68,6 +81,27 @@ CGSize CGSizeScale(CGSize size, CGFloat xScale, CGFloat yScale) {
 - (NSSize)windowWillResize:(NSWindow *)sender toSize:(NSSize)windowSize {
     [self resizeMonaLisaForWindowSize:windowSize];
     return windowSize;
+}
+
+#pragma mark - Private
+
+- (void)scheduleImageFlicker {
+    NSTimeInterval interval = 5 + arc4random_uniform(6); // 5-10s
+    __weak __typeof(self) _self = self;
+    if (self.imageFlickerTimer) return;
+    self.imageFlickerTimer = [NSTimer scheduledTimerWithTimeInterval:interval block:^(NSTimer *timer) {
+        _self.monaLisaImageView.image = self.alternateImage;
+        [_self.eyesViewController showAlternateEye:YES];
+
+        NSTimeInterval duration = 0.01 + ((float)rand()/(float)(RAND_MAX)) * 0.5; // 0.01-0.51s
+
+        [_self performBlock:^(id sender) {
+            _self.monaLisaImageView.image = self.normalImage;
+            [_self.eyesViewController showAlternateEye:NO];
+            _self.imageFlickerTimer = nil;
+            [_self scheduleImageFlicker];
+        } afterDelay:duration];
+    } repeats:NO];
 }
 
 - (void)resizeMonaLisaForWindowSize:(NSSize)windowSize {

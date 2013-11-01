@@ -14,6 +14,11 @@
 @property (strong, nonatomic) SCNNode *leftEyeNode;
 @property (strong, nonatomic) SCNNode *rightEyeNode;
 
+@property (strong, nonatomic) SCNMaterial *leftNormalMaterial;
+@property (strong, nonatomic) SCNMaterial *rightNormalMaterial;
+@property (strong, nonatomic) SCNMaterial *leftAlternateMaterial;
+@property (strong, nonatomic) SCNMaterial *rightAlternateMaterial;
+
 @property (nonatomic) CATransform3D originalLeftEyeTransform;
 @property (nonatomic) CATransform3D originalRightEyeTransform;
 
@@ -47,16 +52,22 @@
     [root addChildNode:self.rightEyeNode];
     self.originalRightEyeTransform = self.rightEyeNode.transform;
 
-    SCNMaterial *material = [SCNMaterial material];
     NSImage *diffuseImage = [NSImage imageNamed:@"eye"];
-    material.diffuse.contents  = diffuseImage;
-    material.specular.contents = [NSColor whiteColor];
-    material.shininess = 1.0;
-    material.diffuse.contentsTransform = CATransform3DMakeTranslation(-0.10,0,0);
-    sphereGeomLeft.materials = @[material];
-    SCNMaterial *materialRight = [material copy];
-    materialRight.diffuse.contentsTransform = CATransform3DMakeTranslation(0.05,0,0);
-    sphereGeomRight.materials = @[materialRight];
+    self.leftNormalMaterial = [SCNMaterial material];
+    self.leftNormalMaterial.diffuse.contents  = diffuseImage;
+    self.leftNormalMaterial.specular.contents = [NSColor whiteColor];
+    self.leftNormalMaterial.shininess = 1.0;
+    self.leftNormalMaterial.diffuse.contentsTransform = CATransform3DMakeTranslation(-0.10,0,0);
+    sphereGeomLeft.materials = @[self.leftNormalMaterial];
+    self.rightNormalMaterial = [self.leftNormalMaterial copy];
+    self.rightNormalMaterial.diffuse.contentsTransform = CATransform3DMakeTranslation(0.05,0,0);
+    sphereGeomRight.materials = @[self.rightNormalMaterial];
+
+    diffuseImage = [NSImage imageNamed:@"eye_cyborg"];
+    self.leftAlternateMaterial = [self.leftNormalMaterial copy];
+    self.leftAlternateMaterial.diffuse.contents = diffuseImage;
+    self.rightAlternateMaterial = [self.rightNormalMaterial copy];
+    self.rightAlternateMaterial.diffuse.contents = diffuseImage;
 
     SCNNode *cameraNode = [SCNNode node];
     cameraNode.camera = [SCNCamera camera];
@@ -70,6 +81,17 @@
 
 - (void)setRightEyeTransform:(CATransform3D)transform {
     self.rightEyeNode.transform = CATransform3DConcat(transform, self.originalRightEyeTransform);
+}
+
+- (void)showAlternateEye:(BOOL)showAlternate {
+    if (showAlternate) {
+        self.leftEyeNode.geometry.materials = @[ self.leftAlternateMaterial ];
+        self.rightEyeNode.geometry.materials = @[ self.rightAlternateMaterial ];
+    }
+    else {
+        self.leftEyeNode.geometry.materials = @[ self.leftNormalMaterial ];
+        self.rightEyeNode.geometry.materials = @[ self.rightNormalMaterial ];
+    }
 }
 
 @end
