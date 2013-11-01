@@ -7,6 +7,7 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
+#import <Quartz/Quartz.h>
 #import "MLMonaLisaWindowController.h"
 #import "MLEyesViewController.h"
 #import "NSTimer+BlocksKit.h"
@@ -33,9 +34,11 @@ CGSize CGSizeScale(CGSize size, CGFloat xScale, CGFloat yScale) {
 @property (strong, nonatomic) NSImage *normalImage;
 @property (strong, nonatomic) NSImage *alternateImage;
 @property (strong, nonatomic) NSTimer *imageFlickerTimer;
+@property (strong, nonatomic) QCView *quartzView;
 @property (nonatomic) CGRect originalEyeFrame;
 @property (nonatomic) CGSize originalMonaLisaSize;
 @property (nonatomic) NSInteger flickerBurst;
+@property (nonatomic) XnVector3D headPosition;
 
 @end
 
@@ -50,6 +53,17 @@ CGSize CGSizeScale(CGSize size, CGFloat xScale, CGFloat yScale) {
     self.eyesViewController.view.frame = CGRectMake([data[@"x"] floatValue], [data[@"y"] floatValue], [data[@"width"] floatValue], [data[@"height"] floatValue]);
     self.eyesViewController.view.layer.autoresizingMask = kCALayerNotSizable | kCALayerMaxXMargin;
     [self.window.contentView addSubview:self.eyesViewController.view positioned:NSWindowBelow relativeTo:self.monaLisaImageView];
+
+    self.quartzView = [[QCView alloc] initWithFrame:self.monaLisaImageView.bounds];
+    NSString *quartzPath = [[NSBundle mainBundle] pathForResource:@"glitch" ofType:@"qtz"];
+    QCComposition *glitchComposition = [QCComposition compositionWithFile:quartzPath];
+    
+    [self.quartzView loadComposition:glitchComposition];
+    [self.quartzView setValue:self.monaLisaImageView.image forInputKey:QCCompositionInputImageKey];
+    [self.quartzView setValue:@(self.headPosition.X) forInputKey:QCCompositionInputXKey];
+    [self.quartzView setValue:@(self.headPosition.Y) forInputKey:QCCompositionInputYKey];
+    self.quartzView.hidden = YES;
+    [self.window.contentView addSubview:self.quartzView positioned:NSWindowAbove relativeTo:self.monaLisaImageView];
 
     self.normalImage = self.monaLisaImageView.image;
     self.alternateImage = [NSImage imageNamed:@"mona_lisa_cyborg"];
@@ -83,16 +97,33 @@ CGSize CGSizeScale(CGSize size, CGFloat xScale, CGFloat yScale) {
 }
 
 - (void)randomImageFlicker {
+    [self.quartzView setValue:@(self.headPosition.X / 1000) forInputKey:QCCompositionInputXKey];
+    [self.quartzView setValue:@(self.headPosition.Y / 1000) forInputKey:QCCompositionInputYKey];
+
     if (arc4random_uniform(256) < 10 && arc4random_uniform(256) > 200) {
+        if (self.monaLisaImageView.image == self.alternateImage) return;
+        __weak __typeof(self) _self = self;
+
+        [self.quartzView setValue:self.monaLisaImageView.image forInputKey:QCCompositionInputImageKey];
         self.monaLisaImageView.image = self.alternateImage;
         [self.eyesViewController showAlternateEye:YES];
 
+        self.quartzView.hidden = NO;
+        [self performBlock:^(id sender) {
+            _self.quartzView.hidden = YES;
+        } afterDelay:1.0];
+
         NSTimeInterval duration = 10.0f + ((float)rand()/(float)(RAND_MAX)) * 10.0f; // 10-20s
 
-        __weak __typeof(self) _self = self;
         [self performBlock:^(id sender) {
+            [self.quartzView setValue:self.monaLisaImageView.image forInputKey:QCCompositionInputImageKey];
             _self.monaLisaImageView.image = self.normalImage;
             [_self.eyesViewController showAlternateEye:NO];
+
+            self.quartzView.hidden = NO;
+            [self performBlock:^(id sender) {
+                _self.quartzView.hidden = YES;
+            } afterDelay:1.0];
         } afterDelay:duration];
     }
 }
@@ -116,10 +147,13 @@ CGSize CGSizeScale(CGSize size, CGFloat xScale, CGFloat yScale) {
     newEyeFrame.size.width = self.originalEyeFrame.size.width * xScale;
     newEyeFrame.size.height = self.originalEyeFrame.size.height * yScale;
     self.eyesViewController.view.frame = newEyeFrame;
+
+    self.quartzView.frame = imageDisplayRect;
 }
 
 - (void)updateEyeLocationWithHeadPosition:(XnVector3D)headPosition {
     CGFloat monaLisaEyeSeparationInMM = 60.0f;
+    self.headPosition = headPosition;
 
     headPosition.Y += 150.f;
 

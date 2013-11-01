@@ -34,6 +34,8 @@
 		CA286AAC181AEABC00DF1D70 /* MLDepthMapWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA286AAB181AEABC00DF1D70 /* MLDepthMapWindow.xib */; };
 		CA286AAF181B0E5A00DF1D70 /* MLXnVector3DSmoother.m in Sources */ = {isa = PBXBuildFile; fileRef = CA286AAE181B0E5A00DF1D70 /* MLXnVector3DSmoother.m */; };
 		CA2E0EFA18172C86000F7B06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA66CA181716D100793230 /* CoreGraphics.framework */; };
+		CA61D4A3182351B000D64219 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA61D4A2182351B000D64219 /* Quartz.framework */; };
+		CA61D4A5182351E500D64219 /* glitch.qtz in Resources */ = {isa = PBXBuildFile; fileRef = CA61D4A4182351E500D64219 /* glitch.qtz */; };
 		CA9ADE5C181A254C00EC8A34 /* MLEyesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9ADE5A181A254C00EC8A34 /* MLEyesViewController.m */; };
 		CA9ADE5D181A254C00EC8A34 /* MLEyesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9ADE5B181A254C00EC8A34 /* MLEyesView.xib */; };
 		CA9ADE60181A258400EC8A34 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9ADE5F181A258400EC8A34 /* SceneKit.framework */; };
@@ -97,6 +99,8 @@
 		CA286AAB181AEABC00DF1D70 /* MLDepthMapWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLDepthMapWindow.xib; sourceTree = "<group>"; };
 		CA286AAD181B0E5A00DF1D70 /* MLXnVector3DSmoother.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLXnVector3DSmoother.h; sourceTree = "<group>"; };
 		CA286AAE181B0E5A00DF1D70 /* MLXnVector3DSmoother.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLXnVector3DSmoother.m; sourceTree = "<group>"; };
+		CA61D4A2182351B000D64219 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		CA61D4A4182351E500D64219 /* glitch.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; path = glitch.qtz; sourceTree = "<group>"; };
 		CA9ADE59181A254C00EC8A34 /* MLEyesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLEyesViewController.h; sourceTree = "<group>"; };
 		CA9ADE5A181A254C00EC8A34 /* MLEyesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLEyesViewController.m; sourceTree = "<group>"; };
 		CA9ADE5B181A254C00EC8A34 /* MLEyesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLEyesView.xib; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA61D4A3182351B000D64219 /* Quartz.framework in Frameworks */,
 				CA9ADE60181A258400EC8A34 /* SceneKit.framework in Frameworks */,
 				CA0D737A1819DBE0007F68CE /* GLUT.framework in Frameworks */,
 				CA0D73781819DBD4007F68CE /* OpenGL.framework in Frameworks */,
@@ -226,6 +231,7 @@
 		CA24CA5B18171395008E9E0F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA61D4A2182351B000D64219 /* Quartz.framework */,
 				CA9ADE5F181A258400EC8A34 /* SceneKit.framework */,
 				CA0D73791819DBE0007F68CE /* GLUT.framework */,
 				CA0D73771819DBD4007F68CE /* OpenGL.framework */,
@@ -254,6 +260,7 @@
 		CA24CA6218171395008E9E0F /* MonaLisaMac */ = {
 			isa = PBXGroup;
 			children = (
+				CA61D4A4182351E500D64219 /* glitch.qtz */,
 				CA9ADE5E181A255500EC8A34 /* View Controllers */,
 				CA0D73871819ED4B007F68CE /* Window Controllers */,
 				CA0D73211819D44E007F68CE /* OpenNI */,
@@ -401,6 +408,7 @@
 				CAA24F6918230F200073D762 /* EyesFrame.plist in Resources */,
 				CA24CA7318171395008E9E0F /* MainMenu.xib in Resources */,
 				CA9ADE5D181A254C00EC8A34 /* MLEyesView.xib in Resources */,
+				CA61D4A5182351E500D64219 /* glitch.qtz in Resources */,
 				8359397EB1DC6787BE5201E7 /* KinectConfig.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
