@@ -126,7 +126,7 @@ void XN_CALLBACK_TYPE UserCalibration_CalibrationComplete(xn::SkeletonCapability
         printf("Supplied user generator doesn't support skeleton\n");
         return 1;
     }
-    XnCallbackHandle hUserCallbacks, hCalibrationStart, hCalibrationComplete, hPoseDetected, hCalibrationInProgress, hPoseInProgress;
+    XnCallbackHandle hUserCallbacks, hCalibrationStart, hCalibrationComplete, hPoseDetected;
     _userGenerator.RegisterUserCallbacks(User_NewUser, User_LostUser, NULL, hUserCallbacks);
     _userGenerator.GetSkeletonCap().RegisterToCalibrationStart(UserCalibration_CalibrationStart, NULL, hCalibrationStart);
     _userGenerator.GetSkeletonCap().RegisterToCalibrationComplete(UserCalibration_CalibrationComplete, NULL, hCalibrationComplete);
@@ -144,9 +144,6 @@ void XN_CALLBACK_TYPE UserCalibration_CalibrationComplete(xn::SkeletonCapability
 
     _userGenerator.GetSkeletonCap().SetSkeletonProfile(XN_SKEL_PROFILE_UPPER); //XN_SKEL_PROFILE_ALL);
 
-    nRetVal = _userGenerator.GetSkeletonCap().RegisterToCalibrationInProgress(UserCalibration_CalibrationInProgress, NULL, hCalibrationInProgress);
-    nRetVal = _userGenerator.GetPoseDetectionCap().RegisterToPoseInProgress(UserPose_PoseInProgress, NULL, hPoseInProgress);
-
     // Maybe this will retain it?
     xnProductionNodeAddRef(_userGenerator);
 
@@ -162,7 +159,7 @@ void XN_CALLBACK_TYPE UserCalibration_CalibrationComplete(xn::SkeletonCapability
 }
 
 - (void)stop {
-    _context.Shutdown();
+    _context.Release();
 }
 
 - (xn::Context)context {

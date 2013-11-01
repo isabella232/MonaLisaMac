@@ -16,14 +16,14 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="1080" height="1920"/>
+            <rect key="contentRect" x="758" y="213" width="360" height="640"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" wantsLayer="YES" id="2">
-                <rect key="frame" x="0.0" y="0.0" width="1080" height="1920"/>
+                <rect key="frame" x="0.0" y="0.0" width="360" height="640"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <imageView autoresizesSubviews="NO" wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="HHK-y6-2Ed" userLabel="Mona Lisa Image View">
-                        <rect key="frame" x="0.0" y="0.0" width="1080" height="1920"/>
+                        <rect key="frame" x="0.0" y="0.0" width="360" height="640"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="mona_lisa" id="Lql-Xy-3hm"/>
                     </imageView>

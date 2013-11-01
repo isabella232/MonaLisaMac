@@ -372,7 +372,7 @@
 						DevelopmentTeam = Z2R9WCWER2;
 					};
 					CA24CA7918171396008E9E0F = {
-						TestTargetID = CA24CA5818171395008E9E0F /* MonaLisaMac */;
+						TestTargetID = CA24CA5818171395008E9E0F;
 					};
 				};
 			};
@@ -613,8 +613,7 @@
 				INFOPLIST_FILE = "MonaLisaMac/MonaLisaMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\"$(SRCROOT)/MonaLisaMac/Libraries\\\"",
-					/Users/brandon/Dropbox/Projects/MonaLisaMac/MonaLisaMac/Libraries,
+					"\"$(SRCROOT)/MonaLisaMac/Libraries\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "Mona Lisa";
@@ -640,8 +639,7 @@
 				INFOPLIST_FILE = "MonaLisaMac/MonaLisaMac-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\\\"$(SRCROOT)/MonaLisaMac/Libraries\\\"",
-					/Users/brandon/Dropbox/Projects/MonaLisaMac/MonaLisaMac/Libraries,
+					"\"$(SRCROOT)/MonaLisaMac/Libraries\"",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "Mona Lisa";

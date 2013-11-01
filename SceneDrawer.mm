@@ -164,10 +164,6 @@ void DrawDepthMap(const xn::DepthMetaData& dmd, const xn::SceneMetaData& smd) {
   static unsigned char* pDepthTexBuf;
   static int texWidth, texHeight;
 
-  float topLeftX;
-  float topLeftY;
-  float bottomRightY;
-  float bottomRightX;
   float texXpos;
   float texYpos;
 
@@ -181,10 +177,6 @@ void DrawDepthMap(const xn::DepthMetaData& dmd, const xn::SceneMetaData& smd) {
 
     bInitialized = true;
 
-    topLeftX = dmd.XRes();
-    topLeftY = 0;
-    bottomRightY = dmd.YRes();
-    bottomRightX = 0;
     texXpos =(float)dmd.XRes()/texWidth;
     texYpos  =(float)dmd.YRes()/texHeight;
 

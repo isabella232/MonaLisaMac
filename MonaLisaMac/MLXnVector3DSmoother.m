@@ -62,7 +62,7 @@
     XnFloat y = a * self.smoothedPosition.Y - b * self.smoothedPosition2.Y;
     XnFloat z = a * self.smoothedPosition.Z - b * self.smoothedPosition2.Z;
 
-    XnVector3D headPosition = {X: x, Y: y, Z: z};
+    XnVector3D headPosition = {x, y, z};
     return headPosition;
 }
 
