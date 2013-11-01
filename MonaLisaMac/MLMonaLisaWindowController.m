@@ -36,7 +36,9 @@ CGSize CGSizeScale(CGSize size, CGFloat xScale, CGFloat yScale) {
 
 - (void)windowDidLoad {
     self.eyesViewController = [[MLEyesViewController alloc] initWithNibName:@"MLEyesView" bundle:nil];
-    self.eyesViewController.view.frame = CGRectMake(350, 1405, 250, 150);
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"EyesFrame" ofType:@"plist"];
+    NSDictionary *data = [NSDictionary dictionaryWithContentsOfFile:path];
+    self.eyesViewController.view.frame = CGRectMake([data[@"x"] floatValue], [data[@"y"] floatValue], [data[@"width"] floatValue], [data[@"height"] floatValue]);
     self.eyesViewController.view.layer.autoresizingMask = kCALayerNotSizable | kCALayerMaxXMargin;
     [self.window.contentView addSubview:self.eyesViewController.view positioned:NSWindowBelow relativeTo:self.monaLisaImageView];
 

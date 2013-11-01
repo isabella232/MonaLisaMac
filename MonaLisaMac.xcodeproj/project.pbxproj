@@ -37,6 +37,7 @@
 		CA9ADE5C181A254C00EC8A34 /* MLEyesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9ADE5A181A254C00EC8A34 /* MLEyesViewController.m */; };
 		CA9ADE5D181A254C00EC8A34 /* MLEyesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9ADE5B181A254C00EC8A34 /* MLEyesView.xib */; };
 		CA9ADE60181A258400EC8A34 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9ADE5F181A258400EC8A34 /* SceneKit.framework */; };
+		CAA24F6918230F200073D762 /* EyesFrame.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAA24F6818230F200073D762 /* EyesFrame.plist */; };
 		CABA66C81817168200793230 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA66C71817168200793230 /* AVFoundation.framework */; };
 		CABA66CE181716FE00793230 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA66C71817168200793230 /* AVFoundation.framework */; };
 		CABA66D01817170400793230 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA66CF1817170400793230 /* QuartzCore.framework */; };
@@ -100,6 +101,7 @@
 		CA9ADE5A181A254C00EC8A34 /* MLEyesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLEyesViewController.m; sourceTree = "<group>"; };
 		CA9ADE5B181A254C00EC8A34 /* MLEyesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLEyesView.xib; sourceTree = "<group>"; };
 		CA9ADE5F181A258400EC8A34 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		CAA24F6818230F200073D762 /* EyesFrame.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EyesFrame.plist; sourceTree = "<group>"; };
 		CABA66C71817168200793230 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CABA66CA181716D100793230 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CABA66CC181716E800793230 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -276,6 +278,7 @@
 				CA24CA6A18171395008E9E0F /* MonaLisaMac-Prefix.pch */,
 				CA24CA6B18171395008E9E0F /* Credits.rtf */,
 				83593AE761418FCD9752C419 /* KinectConfig.xml */,
+				CAA24F6818230F200073D762 /* EyesFrame.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				CA0D73861819ED44007F68CE /* MLMonaLisaWindow.xib in Resources */,
 				CA24CA7518171395008E9E0F /* Images.xcassets in Resources */,
 				CA24CA6D18171395008E9E0F /* Credits.rtf in Resources */,
+				CAA24F6918230F200073D762 /* EyesFrame.plist in Resources */,
 				CA24CA7318171395008E9E0F /* MainMenu.xib in Resources */,
 				CA9ADE5D181A254C00EC8A34 /* MLEyesView.xib in Resources */,
 				8359397EB1DC6787BE5201E7 /* KinectConfig.xml in Resources */,
