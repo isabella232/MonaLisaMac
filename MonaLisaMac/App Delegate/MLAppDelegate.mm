@@ -66,6 +66,7 @@
         
         if (self.monaLisaWindowController) {
             [self.monaLisaWindowController updateEyeLocationWithHeadPosition:position];
+            [self.monaLisaWindowController randomImageFlicker];
         }
     } repeats:YES];
 

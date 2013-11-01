@@ -35,6 +35,7 @@ CGSize CGSizeScale(CGSize size, CGFloat xScale, CGFloat yScale) {
 @property (strong, nonatomic) NSTimer *imageFlickerTimer;
 @property (nonatomic) CGRect originalEyeFrame;
 @property (nonatomic) CGSize originalMonaLisaSize;
+@property (nonatomic) NSInteger flickerBurst;
 
 @end
 
@@ -59,8 +60,6 @@ CGSize CGSizeScale(CGSize size, CGFloat xScale, CGFloat yScale) {
     self.originalMonaLisaSize = CGSizeMake(1080, 1920);
 
     [self resizeMonaLisaForWindowSize:self.window.frame.size];
-
-    [self scheduleImageFlicker];
 }
 
 - (void)windowDidExitFullScreen:(NSNotification *)notification {
@@ -83,26 +82,22 @@ CGSize CGSizeScale(CGSize size, CGFloat xScale, CGFloat yScale) {
     return windowSize;
 }
 
-#pragma mark - Private
+- (void)randomImageFlicker {
+    if (arc4random_uniform(256) < 10 && arc4random_uniform(256) > 200) {
+        self.monaLisaImageView.image = self.alternateImage;
+        [self.eyesViewController showAlternateEye:YES];
 
-- (void)scheduleImageFlicker {
-    NSTimeInterval interval = 5 + arc4random_uniform(6); // 5-10s
-    __weak __typeof(self) _self = self;
-    if (self.imageFlickerTimer) return;
-    self.imageFlickerTimer = [NSTimer scheduledTimerWithTimeInterval:interval block:^(NSTimer *timer) {
-        _self.monaLisaImageView.image = self.alternateImage;
-        [_self.eyesViewController showAlternateEye:YES];
+        NSTimeInterval duration = 10.0f + ((float)rand()/(float)(RAND_MAX)) * 10.0f; // 10-20s
 
-        NSTimeInterval duration = 0.01 + ((float)rand()/(float)(RAND_MAX)) * 0.5; // 0.01-0.51s
-
-        [_self performBlock:^(id sender) {
+        __weak __typeof(self) _self = self;
+        [self performBlock:^(id sender) {
             _self.monaLisaImageView.image = self.normalImage;
             [_self.eyesViewController showAlternateEye:NO];
-            _self.imageFlickerTimer = nil;
-            [_self scheduleImageFlicker];
         } afterDelay:duration];
-    } repeats:NO];
+    }
 }
+
+#pragma mark - Private
 
 - (void)resizeMonaLisaForWindowSize:(NSSize)windowSize {
     CGFloat sx = self.monaLisaImageView.frame.size.width / self.monaLisaImageView.image.size.width;
