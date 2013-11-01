@@ -43,7 +43,7 @@
 
     SCNSphere *sphereGeomRight = [SCNSphere sphereWithRadius:7];
     self.rightEyeNode = [SCNNode nodeWithGeometry:sphereGeomRight];
-    self.rightEyeNode.position = SCNVector3Make(15, 0.0, 0.0);
+    self.rightEyeNode.position = SCNVector3Make(18, 0.0, 0.0);
     [root addChildNode:self.rightEyeNode];
     self.originalRightEyeTransform = self.rightEyeNode.transform;
 
