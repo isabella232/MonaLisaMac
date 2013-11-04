@@ -118,8 +118,8 @@ CGSize CGSizeScale(CGSize size, CGFloat xScale, CGFloat yScale) {
 }
 
 - (void)randomImageFlicker {
-    [self.quartzView setValue:@(self.headPosition.X / 1000) forInputKey:QCCompositionInputXKey];
-    [self.quartzView setValue:@(self.headPosition.Y / 1000) forInputKey:QCCompositionInputYKey];
+    [self.quartzView setValue:@((((float)rand()/(float)(RAND_MAX)) * 4.0f - 2.0f) + self.headPosition.X / 1000) forInputKey:QCCompositionInputXKey];
+    [self.quartzView setValue:@((((float)rand()/(float)(RAND_MAX)) * 4.0f - 2.0f) + self.headPosition.Y / 1000) forInputKey:QCCompositionInputYKey];
 
     if (arc4random_uniform(256) < 10 && arc4random_uniform(256) > 200) {
         if (self.monaLisaImageView.image == self.alternateImage) return;
