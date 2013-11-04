@@ -91,6 +91,10 @@ CGSize CGSizeScale(CGSize size, CGFloat xScale, CGFloat yScale) {
         [self.eventWelcomeViewController.view removeFromSuperview];
     } repeats:NO];
 }
+
+- (void)windowWillClose:(NSNotification *)notification {
+    [self.quartzView stopRendering];
+    [self.quartzView unloadComposition];
 }
 
 - (void)windowDidExitFullScreen:(NSNotification *)notification {
