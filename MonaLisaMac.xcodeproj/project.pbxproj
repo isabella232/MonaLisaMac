@@ -40,6 +40,10 @@
 		CA9ADE5D181A254C00EC8A34 /* MLEyesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9ADE5B181A254C00EC8A34 /* MLEyesView.xib */; };
 		CA9ADE60181A258400EC8A34 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9ADE5F181A258400EC8A34 /* SceneKit.framework */; };
 		CAA24F6918230F200073D762 /* EyesFrame.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAA24F6818230F200073D762 /* EyesFrame.plist */; };
+		CAB82FA91827F39900B8DCD1 /* MLEventWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB82FA71827F39900B8DCD1 /* MLEventWelcomeViewController.m */; };
+		CAB82FAA1827F39900B8DCD1 /* MLEventWelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB82FA81827F39900B8DCD1 /* MLEventWelcomeView.xib */; };
+		CAB82FB0182820BE00B8DCD1 /* Interstate-Bold.otf in CopyFiles */ = {isa = PBXBuildFile; fileRef = CAB82FAB18281BB700B8DCD1 /* Interstate-Bold.otf */; };
+		CAB82FB318283A6600B8DCD1 /* Interstate-Regular.otf in CopyFiles */ = {isa = PBXBuildFile; fileRef = CAB82FB218283A6200B8DCD1 /* Interstate-Regular.otf */; };
 		CABA66C81817168200793230 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA66C71817168200793230 /* AVFoundation.framework */; };
 		CABA66CE181716FE00793230 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA66C71817168200793230 /* AVFoundation.framework */; };
 		CABA66D01817170400793230 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA66CF1817170400793230 /* QuartzCore.framework */; };
@@ -55,6 +59,20 @@
 			remoteInfo = MonaLisaMac;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CAB82FAF182820B300B8DCD1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Fonts;
+			dstSubfolderSpec = 7;
+			files = (
+				CAB82FB0182820BE00B8DCD1 /* Interstate-Bold.otf in CopyFiles */,
+				CAB82FB318283A6600B8DCD1 /* Interstate-Regular.otf in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		132DCC2CEE7B432CBBB7B5D9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +124,11 @@
 		CA9ADE5B181A254C00EC8A34 /* MLEyesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLEyesView.xib; sourceTree = "<group>"; };
 		CA9ADE5F181A258400EC8A34 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		CAA24F6818230F200073D762 /* EyesFrame.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EyesFrame.plist; sourceTree = "<group>"; };
+		CAB82FA61827F39900B8DCD1 /* MLEventWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLEventWelcomeViewController.h; sourceTree = "<group>"; };
+		CAB82FA71827F39900B8DCD1 /* MLEventWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLEventWelcomeViewController.m; sourceTree = "<group>"; };
+		CAB82FA81827F39900B8DCD1 /* MLEventWelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLEventWelcomeView.xib; sourceTree = "<group>"; };
+		CAB82FAB18281BB700B8DCD1 /* Interstate-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Interstate-Bold.otf"; sourceTree = "<group>"; };
+		CAB82FB218283A6200B8DCD1 /* Interstate-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Interstate-Regular.otf"; sourceTree = "<group>"; };
 		CABA66C71817168200793230 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		CABA66CA181716D100793230 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CABA66CC181716E800793230 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -272,6 +295,8 @@
 				CA24CA7418171395008E9E0F /* Images.xcassets */,
 				CA286AAD181B0E5A00DF1D70 /* MLXnVector3DSmoother.h */,
 				CA286AAE181B0E5A00DF1D70 /* MLXnVector3DSmoother.m */,
+				CAB82FAB18281BB700B8DCD1 /* Interstate-Bold.otf */,
+				CAB82FB218283A6200B8DCD1 /* Interstate-Regular.otf */,
 			);
 			path = MonaLisaMac;
 			sourceTree = "<group>";
@@ -314,6 +339,9 @@
 				CA9ADE59181A254C00EC8A34 /* MLEyesViewController.h */,
 				CA9ADE5A181A254C00EC8A34 /* MLEyesViewController.m */,
 				CA9ADE5B181A254C00EC8A34 /* MLEyesView.xib */,
+				CAB82FA61827F39900B8DCD1 /* MLEventWelcomeViewController.h */,
+				CAB82FA71827F39900B8DCD1 /* MLEventWelcomeViewController.m */,
+				CAB82FA81827F39900B8DCD1 /* MLEventWelcomeView.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -330,6 +358,7 @@
 				CA24CA5618171395008E9E0F /* Frameworks */,
 				CA24CA5718171395008E9E0F /* Resources */,
 				33BB7A48B0E243C888CA64E2 /* Copy Pods Resources */,
+				CAB82FAF182820B300B8DCD1 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -405,6 +434,7 @@
 				CA0D73861819ED44007F68CE /* MLMonaLisaWindow.xib in Resources */,
 				CA24CA7518171395008E9E0F /* Images.xcassets in Resources */,
 				CA24CA6D18171395008E9E0F /* Credits.rtf in Resources */,
+				CAB82FAA1827F39900B8DCD1 /* MLEventWelcomeView.xib in Resources */,
 				CAA24F6918230F200073D762 /* EyesFrame.plist in Resources */,
 				CA24CA7318171395008E9E0F /* MainMenu.xib in Resources */,
 				CA9ADE5D181A254C00EC8A34 /* MLEyesView.xib in Resources */,
@@ -464,6 +494,7 @@
 				CA0D73851819ED44007F68CE /* MLMonaLisaWindowController.m in Sources */,
 				CA24CA6918171395008E9E0F /* main.m in Sources */,
 				83593839ED7468B95E1ACCFC /* MLAppDelegate.mm in Sources */,
+				CAB82FA91827F39900B8DCD1 /* MLEventWelcomeViewController.m in Sources */,
 				CA0D73301819D4E7007F68CE /* XnVector3DUtils.cc in Sources */,
 				CA9ADE5C181A254C00EC8A34 /* MLEyesViewController.m in Sources */,
 				CA286AAA181AEAAB00DF1D70 /* MLDepthMapWindowController.m in Sources */,

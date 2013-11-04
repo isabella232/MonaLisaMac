@@ -12,6 +12,7 @@
 #import "MLEyesViewController.h"
 #import "NSTimer+BlocksKit.h"
 #import "NSObject+BlocksKit.h"
+#import "MLEventWelcomeViewController.h"
 
 static CGFloat M_PI_6 = M_PI / 6.0;
 
@@ -35,6 +36,8 @@ CGSize CGSizeScale(CGSize size, CGFloat xScale, CGFloat yScale) {
 @property (strong, nonatomic) NSImage *alternateImage;
 @property (strong, nonatomic) NSTimer *imageFlickerTimer;
 @property (strong, nonatomic) QCView *quartzView;
+@property (strong, nonatomic) MLEventWelcomeViewController *eventWelcomeViewController;
+
 @property (nonatomic) CGRect originalEyeFrame;
 @property (nonatomic) CGSize originalMonaLisaSize;
 @property (nonatomic) NSInteger flickerBurst;
@@ -74,6 +77,20 @@ CGSize CGSizeScale(CGSize size, CGFloat xScale, CGFloat yScale) {
     self.originalMonaLisaSize = CGSizeMake(1080, 1920);
 
     [self resizeMonaLisaForWindowSize:self.window.frame.size];
+
+    NSTimeInterval timeUntilMeeting = [[NSDate dateWithString:@"2013-11-04 15:00:00 -0700"] timeIntervalSinceNow];
+    #ifdef DEBUG
+        timeUntilMeeting = 15 * 60 + 1;
+    #endif
+    NSTimeInterval timeUntilShowWelcome = timeUntilMeeting - 15 * 60;
+    NSTimeInterval timeUntilHideWelcome = timeUntilMeeting + 15 * 60;
+    [NSTimer scheduledTimerWithTimeInterval:timeUntilShowWelcome block:^(NSTimer *timer) {
+        [self showEventWelcomeView];
+    } repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:timeUntilHideWelcome block:^(NSTimer *timer) {
+        [self.eventWelcomeViewController.view removeFromSuperview];
+    } repeats:NO];
+}
 }
 
 - (void)windowDidExitFullScreen:(NSNotification *)notification {
@@ -149,6 +166,7 @@ CGSize CGSizeScale(CGSize size, CGFloat xScale, CGFloat yScale) {
     self.eyesViewController.view.frame = newEyeFrame;
 
     self.quartzView.frame = imageDisplayRect;
+    self.eventWelcomeViewController.view.frame = imageDisplayRect;
 }
 
 - (void)updateEyeLocationWithHeadPosition:(XnVector3D)headPosition {
@@ -178,6 +196,13 @@ CGSize CGSizeScale(CGSize size, CGFloat xScale, CGFloat yScale) {
 
     [self.eyesViewController setLeftEyeTransform:leftEyeTransform];
     [self.eyesViewController setRightEyeTransform:rightEyeTransform];
+}
+
+- (void)showEventWelcomeView {
+    if (!self.eventWelcomeViewController) {
+        self.eventWelcomeViewController = [[MLEventWelcomeViewController alloc] initWithNibName:@"MLEventWelcomeView" bundle:nil];
+    }
+    [self.window.contentView addSubview:self.eventWelcomeViewController.view];
 }
 
 @end
