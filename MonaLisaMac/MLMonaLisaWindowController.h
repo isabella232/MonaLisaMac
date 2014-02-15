@@ -12,6 +12,5 @@
 @interface MLMonaLisaWindowController : NSWindowController
 
 - (void)updateEyeLocationWithHeadPosition:(XnVector3D)headPosition;
-- (void)randomImageFlicker;
 
 @end

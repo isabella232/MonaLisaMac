@@ -41,7 +41,6 @@
 		CA3DF31C18AF28DC0009CD37 /* MLPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA3DF31A18AF28DC0009CD37 /* MLPreferencesView.xib */; };
 		CA3DF31F18AF2ACC0009CD37 /* MLXnVector3DSmoother.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3DF31E18AF2ACC0009CD37 /* MLXnVector3DSmoother.m */; };
 		CA61D4A3182351B000D64219 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA61D4A2182351B000D64219 /* Quartz.framework */; };
-		CA61D4A5182351E500D64219 /* glitch.qtz in Resources */ = {isa = PBXBuildFile; fileRef = CA61D4A4182351E500D64219 /* glitch.qtz */; };
 		CA9ADE5C181A254C00EC8A34 /* MLEyesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9ADE5A181A254C00EC8A34 /* MLEyesViewController.m */; };
 		CA9ADE5D181A254C00EC8A34 /* MLEyesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9ADE5B181A254C00EC8A34 /* MLEyesView.xib */; };
 		CAA24F6918230F200073D762 /* EyesFrame.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAA24F6818230F200073D762 /* EyesFrame.plist */; };
@@ -129,7 +128,6 @@
 		CA3DF31D18AF2ACC0009CD37 /* MLXnVector3DSmoother.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLXnVector3DSmoother.h; path = MonaLisaMac/MLXnVector3DSmoother.h; sourceTree = SOURCE_ROOT; };
 		CA3DF31E18AF2ACC0009CD37 /* MLXnVector3DSmoother.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLXnVector3DSmoother.m; path = MonaLisaMac/MLXnVector3DSmoother.m; sourceTree = SOURCE_ROOT; };
 		CA61D4A2182351B000D64219 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
-		CA61D4A4182351E500D64219 /* glitch.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; path = glitch.qtz; sourceTree = "<group>"; };
 		CA9ADE59181A254C00EC8A34 /* MLEyesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLEyesViewController.h; sourceTree = "<group>"; };
 		CA9ADE5A181A254C00EC8A34 /* MLEyesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLEyesViewController.m; sourceTree = "<group>"; };
 		CA9ADE5B181A254C00EC8A34 /* MLEyesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLEyesView.xib; sourceTree = "<group>"; };
@@ -362,7 +360,6 @@
 				CA1975C5185241E600184611 /* spark.png */,
 				CAB82FAB18281BB700B8DCD1 /* Interstate-Bold.otf */,
 				CAB82FB218283A6200B8DCD1 /* Interstate-Regular.otf */,
-				CA61D4A4182351E500D64219 /* glitch.qtz */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -475,7 +472,6 @@
 				CAA24F6918230F200073D762 /* EyesFrame.plist in Resources */,
 				CA24CA7318171395008E9E0F /* MainMenu.xib in Resources */,
 				CA9ADE5D181A254C00EC8A34 /* MLEyesView.xib in Resources */,
-				CA61D4A5182351E500D64219 /* glitch.qtz in Resources */,
 				8359397EB1DC6787BE5201E7 /* KinectConfig.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
