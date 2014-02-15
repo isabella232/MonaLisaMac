@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-MASPreferences.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2A05ED210A1D4F4A864C9DB5</key>
+		<key>557F45E2EB3444FAB91B2672</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3D166B1CAA3F4D3F8199FBFF</key>
+		<key>59589336924149C4815DFD0E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>80558F80387743369A1DBF00</key>
 		<dict>
 			<key>primary</key>
 			<true/>

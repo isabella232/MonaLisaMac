@@ -12,3 +12,9 @@
 #define COCOAPODS_VERSION_MINOR_BlocksKit 8
 #define COCOAPODS_VERSION_PATCH_BlocksKit 3
 
+// MASPreferences
+#define COCOAPODS_POD_AVAILABLE_MASPreferences
+#define COCOAPODS_VERSION_MAJOR_MASPreferences 1
+#define COCOAPODS_VERSION_MINOR_MASPreferences 1
+#define COCOAPODS_VERSION_PATCH_MASPreferences 0
+

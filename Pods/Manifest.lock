@@ -1,11 +1,14 @@
 PODS:
   - BlocksKit (1.8.3):
     - libffi
+  - MASPreferences (1.1)
 
 DEPENDENCIES:
   - BlocksKit
+  - MASPreferences
 
 SPEC CHECKSUMS:
   BlocksKit: 27257f9cbbec0ea98c80ba83cc2ea7111ae62eb2
+  MASPreferences: 103fda1283c701dfed5503edbe24b1ab504ed6d9
 
-COCOAPODS: 0.27.1
+COCOAPODS: 0.29.0

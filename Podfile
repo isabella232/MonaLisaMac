@@ -1,1 +1,2 @@
 pod 'BlocksKit'
+pod 'MASPreferences'
