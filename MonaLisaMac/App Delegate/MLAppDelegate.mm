@@ -18,6 +18,11 @@
 #import "MLPreferencesViewController.h"
 #import "MASPreferencesWindowController.h"
 
+NSString * const MLEyeXPositionKey = @"MLEyeXPositionKey";
+NSString * const MLEyeYPositionKey = @"MLEyeYPositionKey";
+NSString * const MLEyeWidthKey = @"MLEyeWidthKey";
+NSString * const MLEyeHeightKey = @"MLEyeHeightKey";
+
 @interface MLAppDelegate ()
 
 @property (strong, nonatomic) MLMonaLisaWindowController *monaLisaWindowController;
@@ -36,6 +41,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     self.currentlyTrackedUserID = INT32_MAX;
+    [self setupEyeDefaults];
 
     CocoaOpenNI *openNI = [CocoaOpenNI sharedOpenNI];
     if (openNI) {
@@ -65,6 +71,28 @@
 }
 
 #pragma mark - Private
+
+- (void)setupEyeDefaults {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"EyesFrame" ofType:@"plist"];
+    NSDictionary *data = [NSDictionary dictionaryWithContentsOfFile:path];
+
+    NSNumber *eyeXPosition = [[NSUserDefaults standardUserDefaults] objectForKey:MLEyeXPositionKey];
+    if (!eyeXPosition) {
+        [[NSUserDefaults standardUserDefaults] setObject:data[@"x"] forKey:MLEyeXPositionKey];
+    }
+    NSNumber *eyeYPosition = [[NSUserDefaults standardUserDefaults] objectForKey:MLEyeYPositionKey];
+    if (!eyeYPosition) {
+        [[NSUserDefaults standardUserDefaults] setObject:data[@"y"] forKey:MLEyeYPositionKey];
+    }
+    NSNumber *eyeWidth = [[NSUserDefaults standardUserDefaults] objectForKey:MLEyeWidthKey];
+    if (!eyeWidth) {
+        [[NSUserDefaults standardUserDefaults] setObject:data[@"width"] forKey:MLEyeWidthKey];
+    }
+    NSNumber *eyeHeight = [[NSUserDefaults standardUserDefaults] objectForKey:MLEyeHeightKey];
+    if (!eyeHeight) {
+        [[NSUserDefaults standardUserDefaults] setObject:data[@"height"] forKey:MLEyeHeightKey];
+    }
+}
 
 - (void)setupOpenNI:(CocoaOpenNI *)openNI {
     [openNI startWithConfigPath:[[NSBundle mainBundle] pathForResource:@"KinectConfig" ofType:@"xml"]];

@@ -8,6 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
+extern NSString * const MLEyeXPositionKey;
+extern NSString * const MLEyeYPositionKey;
+extern NSString * const MLEyeWidthKey;
+extern NSString * const MLEyeHeightKey;
+
 @interface MLAppDelegate : NSObject <NSApplicationDelegate>
 
 @end

@@ -11,6 +11,7 @@
 #import "NSTimer+BlocksKit.h"
 #import "NSObject+BlocksKit.h"
 #import "MLEventWelcomeViewController.h"
+#import "MLAppDelegate.h"
 
 static CGFloat M_PI_6 = M_PI / 6.0;
 
@@ -48,9 +49,12 @@ CGSize CGSizeScale(CGSize size, CGFloat xScale, CGFloat yScale) {
 
 - (void)windowDidLoad {
     self.eyesViewController = [[MLEyesViewController alloc] initWithNibName:@"MLEyesView" bundle:nil];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"EyesFrame" ofType:@"plist"];
-    NSDictionary *data = [NSDictionary dictionaryWithContentsOfFile:path];
-    self.eyesViewController.view.frame = CGRectMake([data[@"x"] floatValue], [data[@"y"] floatValue], [data[@"width"] floatValue], [data[@"height"] floatValue]);
+    CGFloat eyeXPosition = [[[NSUserDefaults standardUserDefaults] objectForKey:MLEyeXPositionKey] floatValue];
+    CGFloat eyeYPosition = [[[NSUserDefaults standardUserDefaults] objectForKey:MLEyeYPositionKey] floatValue];
+    CGFloat eyeWidth = [[[NSUserDefaults standardUserDefaults] objectForKey:MLEyeWidthKey] floatValue];
+    CGFloat eyeHeight = [[[NSUserDefaults standardUserDefaults] objectForKey:MLEyeHeightKey] floatValue];
+    CGRect frame = CGRectMake(eyeXPosition, eyeYPosition, eyeWidth, eyeHeight);
+    self.eyesViewController.view.frame = frame;
     self.eyesViewController.view.layer.autoresizingMask = kCALayerNotSizable | kCALayerMaxXMargin;
     [self.window.contentView addSubview:self.eyesViewController.view positioned:NSWindowBelow relativeTo:self.monaLisaImageView];
 
