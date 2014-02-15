@@ -32,53 +32,20 @@
 
 @implementation MLAppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-
-    self.currentlyTrackedUserID = INT32_MAX;
-
-    [[CocoaOpenNI sharedOpenNI] startWithConfigPath:[[NSBundle mainBundle] pathForResource:@"KinectConfig" ofType:@"xml"]];
-
-    [NSTimer scheduledTimerWithTimeInterval:1.0 / 30.0 block:^(NSTimer *timer){
-        if ([CocoaOpenNI sharedOpenNI].started) {
-            // Sometimes we get a crash in here
-            [[CocoaOpenNI sharedOpenNI] context].WaitAndUpdateAll();
-            [self.depthMapWindowController update];
-        }
-
-        // Haven't found a skeleton yet or previous skeleton is invalid
-        BOOL currentSkeletonIsInvalid = ![[[CocoaOpenNI sharedOpenNI].skeletons allKeys] containsObject:@(self.currentlyTrackedUserID)];
-        if (self.currentlyTrackedUserID == INT32_MAX || currentSkeletonIsInvalid) {
-        self.currentlyTrackedUserID = [[CocoaOpenNI sharedOpenNI] firstTrackedUser];
-        }
-        if (self.currentlyTrackedUserID == INT32_MAX) return;
-
-        // Schedule the self-repeating timer to loop through users
-        if (!self.changeUserTimer) {
-            [self createChangeUserTimer];
-        }
 @synthesize preferencesWindowController = _preferencesWindowController;
 
-        Skeleton *firstSkeleton = [CocoaOpenNI sharedOpenNI].skeletons[@(self.currentlyTrackedUserID)];
-        XnVector3D position = firstSkeleton.head.position;
-        
-        if (!self.smoother) {
-            self.smoother = [[MLXnVector3DSmoother alloc] initWithVector:position interval:0.1];
-        }
-        else {
-            position = [self.smoother smooth:position];
-        }
-        
-        if (self.monaLisaWindowController) {
-            [self.monaLisaWindowController updateEyeLocationWithHeadPosition:position];
-            [self.monaLisaWindowController randomImageFlicker];
-        }
-    } repeats:YES];
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    self.currentlyTrackedUserID = INT32_MAX;
 
-    [self showDepthImage:nil];
+    CocoaOpenNI *openNI = [CocoaOpenNI sharedOpenNI];
+    if (openNI) {
+        [self setupOpenNI:openNI];
+    }
+
     [self showMonaLisa:nil];
 }
 
-#pragma mark - Private
+#pragma mark - Actions
 
 - (IBAction)showDepthImage:(id)sender {
     self.depthMapWindowController = [[MLDepthMapWindowController alloc] initWithWindowNibName:@"MLDepthMapWindow"];
@@ -93,6 +60,52 @@
     [self.monaLisaWindowController.window toggleFullScreen:nil];
 }
 
+- (IBAction)openPreferences:(id)sender {
+    [self.preferencesWindowController showWindow:nil];
+}
+
+#pragma mark - Private
+
+- (void)setupOpenNI:(CocoaOpenNI *)openNI {
+    [openNI startWithConfigPath:[[NSBundle mainBundle] pathForResource:@"KinectConfig" ofType:@"xml"]];
+
+    [NSTimer scheduledTimerWithTimeInterval:1.0 / 30.0 block:^(NSTimer *timer){
+        if ([CocoaOpenNI sharedOpenNI].started) {
+            // Sometimes we get a crash in here
+            [[CocoaOpenNI sharedOpenNI] context].WaitAndUpdateAll();
+            [self.depthMapWindowController update];
+        }
+
+        // Haven't found a skeleton yet or previous skeleton is invalid
+        BOOL currentSkeletonIsInvalid = ![[[CocoaOpenNI sharedOpenNI].skeletons allKeys] containsObject:@(self.currentlyTrackedUserID)];
+        if (self.currentlyTrackedUserID == INT32_MAX || currentSkeletonIsInvalid) {
+            self.currentlyTrackedUserID = [[CocoaOpenNI sharedOpenNI] firstTrackedUser];
+        }
+        if (self.currentlyTrackedUserID == INT32_MAX) return;
+
+        // Schedule the self-repeating timer to loop through users
+        if (!self.changeUserTimer) {
+            [self createChangeUserTimer];
+        }
+
+        Skeleton *firstSkeleton = [CocoaOpenNI sharedOpenNI].skeletons[@(self.currentlyTrackedUserID)];
+        XnVector3D position = firstSkeleton.head.position;
+
+        if (!self.smoother) {
+            self.smoother = [[MLXnVector3DSmoother alloc] initWithVector:position interval:0.1];
+        }
+        else {
+            position = [self.smoother smooth:position];
+        }
+
+        if (self.monaLisaWindowController) {
+            [self.monaLisaWindowController updateEyeLocationWithHeadPosition:position];
+        }
+    } repeats:YES];
+    
+    [self showDepthImage:nil];
+}
+
 - (NSWindowController *)preferencesWindowController {
     if (!_preferencesWindowController) {
         NSViewController *preferencesViewController = [[MLPreferencesViewController alloc] initWithNibName:@"MLPreferencesView" bundle:nil];
@@ -102,10 +115,6 @@
         _preferencesWindowController = [[MASPreferencesWindowController alloc] initWithViewControllers:controllers title:title];
     }
     return _preferencesWindowController;
-}
-
-- (IBAction)openPreferences:(id)sender {
-    [self.preferencesWindowController showWindow:nil];
 }
 
 - (void)createChangeUserTimer {
