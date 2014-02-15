@@ -15,11 +15,14 @@
 #import "MLMonaLisaWindowController.h"
 #import "MLDepthMapWindowController.h"
 #import "MLXnVector3DSmoother.h"
+#import "MLPreferencesViewController.h"
+#import "MASPreferencesWindowController.h"
 
 @interface MLAppDelegate ()
 
 @property (strong, nonatomic) MLMonaLisaWindowController *monaLisaWindowController;
 @property (strong, nonatomic) MLDepthMapWindowController *depthMapWindowController;
+@property (strong, nonatomic, readonly) NSWindowController *preferencesWindowController;
 @property (strong, nonatomic) MLXnVector3DSmoother *smoother;
 
 @property (strong, nonatomic) NSTimer *changeUserTimer;
@@ -53,6 +56,7 @@
         if (!self.changeUserTimer) {
             [self createChangeUserTimer];
         }
+@synthesize preferencesWindowController = _preferencesWindowController;
 
         Skeleton *firstSkeleton = [CocoaOpenNI sharedOpenNI].skeletons[@(self.currentlyTrackedUserID)];
         XnVector3D position = firstSkeleton.head.position;
@@ -87,6 +91,21 @@
     [self.monaLisaWindowController showWindow:nil];
     [self.monaLisaWindowController.window makeMainWindow];
     [self.monaLisaWindowController.window toggleFullScreen:nil];
+}
+
+- (NSWindowController *)preferencesWindowController {
+    if (!_preferencesWindowController) {
+        NSViewController *preferencesViewController = [[MLPreferencesViewController alloc] initWithNibName:@"MLPreferencesView" bundle:nil];
+        NSArray *controllers = @[ preferencesViewController ];
+
+        NSString *title = NSLocalizedString(@"Preferences", @"Common title for Preferences window");
+        _preferencesWindowController = [[MASPreferencesWindowController alloc] initWithViewControllers:controllers title:title];
+    }
+    return _preferencesWindowController;
+}
+
+- (IBAction)openPreferences:(id)sender {
+    [self.preferencesWindowController showWindow:nil];
 }
 
 - (void)createChangeUserTimer {

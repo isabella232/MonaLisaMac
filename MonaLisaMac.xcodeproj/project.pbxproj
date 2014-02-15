@@ -15,11 +15,15 @@
 		83593C3E23BFB733366F9276 /* Skeleton.mm in Sources */ = {isa = PBXBuildFile; fileRef = 835933564A994BAE9E63656F /* Skeleton.mm */; };
 		CA0D732E1819D4E7007F68CE /* CocoaOpenNI.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA0D73271819D4E7007F68CE /* CocoaOpenNI.mm */; };
 		CA0D73301819D4E7007F68CE /* XnVector3DUtils.cc in Sources */ = {isa = PBXBuildFile; fileRef = CA0D732B1819D4E7007F68CE /* XnVector3DUtils.cc */; };
-		CA0D73781819DBD4007F68CE /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0D73771819DBD4007F68CE /* OpenGL.framework */; };
 		CA0D737A1819DBE0007F68CE /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0D73791819DBE0007F68CE /* GLUT.framework */; };
 		CA0D737B1819DC36007F68CE /* libOpenNI.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0D73341819D67A007F68CE /* libOpenNI.dylib */; };
 		CA0D73851819ED44007F68CE /* MLMonaLisaWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA0D73831819ED44007F68CE /* MLMonaLisaWindowController.m */; };
 		CA0D73861819ED44007F68CE /* MLMonaLisaWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA0D73841819ED44007F68CE /* MLMonaLisaWindow.xib */; };
+		CA1975C6185241E600184611 /* Snow.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA1975C4185241E600184611 /* Snow.sks */; };
+		CA1975C7185241E600184611 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = CA1975C5185241E600184611 /* spark.png */; };
+		CA1975C91852484000184611 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA1975C81852484000184611 /* SpriteKit.framework */; };
+		CA1975CB1852494700184611 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9ADE5F181A258400EC8A34 /* SceneKit.framework */; };
+		CA1975CC18524C4D00184611 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0D73771819DBD4007F68CE /* OpenGL.framework */; };
 		CA24CA5D18171395008E9E0F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA24CA5C18171395008E9E0F /* Cocoa.framework */; };
 		CA24CA6718171395008E9E0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CA24CA6518171395008E9E0F /* InfoPlist.strings */; };
 		CA24CA6918171395008E9E0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CA24CA6818171395008E9E0F /* main.m */; };
@@ -32,13 +36,14 @@
 		CA24CA8718171396008E9E0F /* MonaLisaMacTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CA24CA8618171396008E9E0F /* MonaLisaMacTests.m */; };
 		CA286AAA181AEAAB00DF1D70 /* MLDepthMapWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA286AA9181AEAAB00DF1D70 /* MLDepthMapWindowController.m */; };
 		CA286AAC181AEABC00DF1D70 /* MLDepthMapWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA286AAB181AEABC00DF1D70 /* MLDepthMapWindow.xib */; };
-		CA286AAF181B0E5A00DF1D70 /* MLXnVector3DSmoother.m in Sources */ = {isa = PBXBuildFile; fileRef = CA286AAE181B0E5A00DF1D70 /* MLXnVector3DSmoother.m */; };
 		CA2E0EFA18172C86000F7B06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA66CA181716D100793230 /* CoreGraphics.framework */; };
+		CA3DF31B18AF28DC0009CD37 /* MLPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3DF31918AF28DC0009CD37 /* MLPreferencesViewController.m */; };
+		CA3DF31C18AF28DC0009CD37 /* MLPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA3DF31A18AF28DC0009CD37 /* MLPreferencesView.xib */; };
+		CA3DF31F18AF2ACC0009CD37 /* MLXnVector3DSmoother.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3DF31E18AF2ACC0009CD37 /* MLXnVector3DSmoother.m */; };
 		CA61D4A3182351B000D64219 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA61D4A2182351B000D64219 /* Quartz.framework */; };
 		CA61D4A5182351E500D64219 /* glitch.qtz in Resources */ = {isa = PBXBuildFile; fileRef = CA61D4A4182351E500D64219 /* glitch.qtz */; };
 		CA9ADE5C181A254C00EC8A34 /* MLEyesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9ADE5A181A254C00EC8A34 /* MLEyesViewController.m */; };
 		CA9ADE5D181A254C00EC8A34 /* MLEyesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9ADE5B181A254C00EC8A34 /* MLEyesView.xib */; };
-		CA9ADE60181A258400EC8A34 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9ADE5F181A258400EC8A34 /* SceneKit.framework */; };
 		CAA24F6918230F200073D762 /* EyesFrame.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAA24F6818230F200073D762 /* EyesFrame.plist */; };
 		CAB82FA91827F39900B8DCD1 /* MLEventWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB82FA71827F39900B8DCD1 /* MLEventWelcomeViewController.m */; };
 		CAB82FAA1827F39900B8DCD1 /* MLEventWelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB82FA81827F39900B8DCD1 /* MLEventWelcomeView.xib */; };
@@ -95,6 +100,9 @@
 		CA0D73821819ED44007F68CE /* MLMonaLisaWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLMonaLisaWindowController.h; sourceTree = "<group>"; };
 		CA0D73831819ED44007F68CE /* MLMonaLisaWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLMonaLisaWindowController.m; sourceTree = "<group>"; };
 		CA0D73841819ED44007F68CE /* MLMonaLisaWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLMonaLisaWindow.xib; sourceTree = "<group>"; };
+		CA1975C4185241E600184611 /* Snow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Snow.sks; sourceTree = "<group>"; };
+		CA1975C5185241E600184611 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		CA1975C81852484000184611 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		CA24CA5918171395008E9E0F /* Mona Lisa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mona Lisa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA24CA5C18171395008E9E0F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CA24CA5F18171395008E9E0F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -115,8 +123,11 @@
 		CA286AA8181AEAAB00DF1D70 /* MLDepthMapWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLDepthMapWindowController.h; sourceTree = "<group>"; };
 		CA286AA9181AEAAB00DF1D70 /* MLDepthMapWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLDepthMapWindowController.m; sourceTree = "<group>"; };
 		CA286AAB181AEABC00DF1D70 /* MLDepthMapWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLDepthMapWindow.xib; sourceTree = "<group>"; };
-		CA286AAD181B0E5A00DF1D70 /* MLXnVector3DSmoother.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLXnVector3DSmoother.h; sourceTree = "<group>"; };
-		CA286AAE181B0E5A00DF1D70 /* MLXnVector3DSmoother.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLXnVector3DSmoother.m; sourceTree = "<group>"; };
+		CA3DF31818AF28DC0009CD37 /* MLPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLPreferencesViewController.h; path = Preferences/MLPreferencesViewController.h; sourceTree = "<group>"; };
+		CA3DF31918AF28DC0009CD37 /* MLPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLPreferencesViewController.m; path = Preferences/MLPreferencesViewController.m; sourceTree = "<group>"; };
+		CA3DF31A18AF28DC0009CD37 /* MLPreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MLPreferencesView.xib; path = Preferences/MLPreferencesView.xib; sourceTree = "<group>"; };
+		CA3DF31D18AF2ACC0009CD37 /* MLXnVector3DSmoother.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLXnVector3DSmoother.h; path = MonaLisaMac/MLXnVector3DSmoother.h; sourceTree = SOURCE_ROOT; };
+		CA3DF31E18AF2ACC0009CD37 /* MLXnVector3DSmoother.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLXnVector3DSmoother.m; path = MonaLisaMac/MLXnVector3DSmoother.m; sourceTree = SOURCE_ROOT; };
 		CA61D4A2182351B000D64219 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		CA61D4A4182351E500D64219 /* glitch.qtz */ = {isa = PBXFileReference; lastKnownFileType = "video.quartz-composer"; path = glitch.qtz; sourceTree = "<group>"; };
 		CA9ADE59181A254C00EC8A34 /* MLEyesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLEyesViewController.h; sourceTree = "<group>"; };
@@ -141,10 +152,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA1975CC18524C4D00184611 /* OpenGL.framework in Frameworks */,
+				CA1975CB1852494700184611 /* SceneKit.framework in Frameworks */,
+				CA1975C91852484000184611 /* SpriteKit.framework in Frameworks */,
 				CA61D4A3182351B000D64219 /* Quartz.framework in Frameworks */,
-				CA9ADE60181A258400EC8A34 /* SceneKit.framework in Frameworks */,
 				CA0D737A1819DBE0007F68CE /* GLUT.framework in Frameworks */,
-				CA0D73781819DBD4007F68CE /* OpenGL.framework in Frameworks */,
 				CA2E0EFA18172C86000F7B06 /* CoreGraphics.framework in Frameworks */,
 				CABA66D11817172000793230 /* CoreMedia.framework in Frameworks */,
 				CABA66D01817170400793230 /* QuartzCore.framework in Frameworks */,
@@ -191,6 +203,8 @@
 		83593D07277D6BFF56C44336 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CA3DF31D18AF2ACC0009CD37 /* MLXnVector3DSmoother.h */,
+				CA3DF31E18AF2ACC0009CD37 /* MLXnVector3DSmoother.m */,
 				8359331AA8738D2F48FF0A7F /* Skeleton.h */,
 				835933564A994BAE9E63656F /* Skeleton.mm */,
 			);
@@ -254,6 +268,7 @@
 		CA24CA5B18171395008E9E0F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA1975C81852484000184611 /* SpriteKit.framework */,
 				CA61D4A2182351B000D64219 /* Quartz.framework */,
 				CA9ADE5F181A258400EC8A34 /* SceneKit.framework */,
 				CA0D73791819DBE0007F68CE /* GLUT.framework */,
@@ -283,20 +298,17 @@
 		CA24CA6218171395008E9E0F /* MonaLisaMac */ = {
 			isa = PBXGroup;
 			children = (
-				CA61D4A4182351E500D64219 /* glitch.qtz */,
+				835935A8C6CC4E12439F8695 /* App Delegate */,
 				CA9ADE5E181A255500EC8A34 /* View Controllers */,
 				CA0D73871819ED4B007F68CE /* Window Controllers */,
+				CA3DF31618AF282E0009CD37 /* Preferences */,
 				CA0D73211819D44E007F68CE /* OpenNI */,
-				835935A8C6CC4E12439F8695 /* App Delegate */,
 				83593C2FEE8F4020DE52822F /* Views */,
 				83593D07277D6BFF56C44336 /* Models */,
+				CA3DF31718AF28AF0009CD37 /* Resources */,
 				CA24CA6318171395008E9E0F /* Supporting Files */,
 				CA24CA7118171395008E9E0F /* MainMenu.xib */,
 				CA24CA7418171395008E9E0F /* Images.xcassets */,
-				CA286AAD181B0E5A00DF1D70 /* MLXnVector3DSmoother.h */,
-				CA286AAE181B0E5A00DF1D70 /* MLXnVector3DSmoother.m */,
-				CAB82FAB18281BB700B8DCD1 /* Interstate-Bold.otf */,
-				CAB82FB218283A6200B8DCD1 /* Interstate-Regular.otf */,
 			);
 			path = MonaLisaMac;
 			sourceTree = "<group>";
@@ -331,6 +343,28 @@
 				CA24CA8318171396008E9E0F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CA3DF31618AF282E0009CD37 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				CA3DF31818AF28DC0009CD37 /* MLPreferencesViewController.h */,
+				CA3DF31918AF28DC0009CD37 /* MLPreferencesViewController.m */,
+				CA3DF31A18AF28DC0009CD37 /* MLPreferencesView.xib */,
+			);
+			name = Preferences;
+			sourceTree = "<group>";
+		};
+		CA3DF31718AF28AF0009CD37 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CA1975C4185241E600184611 /* Snow.sks */,
+				CA1975C5185241E600184611 /* spark.png */,
+				CAB82FAB18281BB700B8DCD1 /* Interstate-Bold.otf */,
+				CAB82FB218283A6200B8DCD1 /* Interstate-Regular.otf */,
+				CA61D4A4182351E500D64219 /* glitch.qtz */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		CA9ADE5E181A255500EC8A34 /* View Controllers */ = {
@@ -431,10 +465,13 @@
 			files = (
 				CA24CA6718171395008E9E0F /* InfoPlist.strings in Resources */,
 				CA286AAC181AEABC00DF1D70 /* MLDepthMapWindow.xib in Resources */,
+				CA3DF31C18AF28DC0009CD37 /* MLPreferencesView.xib in Resources */,
 				CA0D73861819ED44007F68CE /* MLMonaLisaWindow.xib in Resources */,
 				CA24CA7518171395008E9E0F /* Images.xcassets in Resources */,
 				CA24CA6D18171395008E9E0F /* Credits.rtf in Resources */,
+				CA1975C7185241E600184611 /* spark.png in Resources */,
 				CAB82FAA1827F39900B8DCD1 /* MLEventWelcomeView.xib in Resources */,
+				CA1975C6185241E600184611 /* Snow.sks in Resources */,
 				CAA24F6918230F200073D762 /* EyesFrame.plist in Resources */,
 				CA24CA7318171395008E9E0F /* MainMenu.xib in Resources */,
 				CA9ADE5D181A254C00EC8A34 /* MLEyesView.xib in Resources */,
@@ -498,9 +535,10 @@
 				CA0D73301819D4E7007F68CE /* XnVector3DUtils.cc in Sources */,
 				CA9ADE5C181A254C00EC8A34 /* MLEyesViewController.m in Sources */,
 				CA286AAA181AEAAB00DF1D70 /* MLDepthMapWindowController.m in Sources */,
-				CA286AAF181B0E5A00DF1D70 /* MLXnVector3DSmoother.m in Sources */,
 				CA0D732E1819D4E7007F68CE /* CocoaOpenNI.mm in Sources */,
+				CA3DF31B18AF28DC0009CD37 /* MLPreferencesViewController.m in Sources */,
 				83593C3E23BFB733366F9276 /* Skeleton.mm in Sources */,
+				CA3DF31F18AF2ACC0009CD37 /* MLXnVector3DSmoother.m in Sources */,
 				83593B80441ACF6CB4101E45 /* DepthView.mm in Sources */,
 				8359389098312A22CC448739 /* SceneDrawer.mm in Sources */,
 			);
@@ -635,6 +673,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -661,6 +700,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
 				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_ENABLE_MODULES = NO;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
