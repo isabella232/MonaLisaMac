@@ -41,7 +41,7 @@ NSString * const MLEyeHeightKey = @"MLEyeHeightKey";
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     self.currentlyTrackedUserID = INT32_MAX;
-    [self setupEyeDefaults];
+    [self setupDefaults];
 
     CocoaOpenNI *openNI = [CocoaOpenNI sharedOpenNI];
     if (openNI) {
@@ -72,26 +72,10 @@ NSString * const MLEyeHeightKey = @"MLEyeHeightKey";
 
 #pragma mark - Private
 
-- (void)setupEyeDefaults {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"EyesFrame" ofType:@"plist"];
-    NSDictionary *data = [NSDictionary dictionaryWithContentsOfFile:path];
-
-    NSNumber *eyeXPosition = [[NSUserDefaults standardUserDefaults] objectForKey:MLEyeXPositionKey];
-    if (!eyeXPosition) {
-        [[NSUserDefaults standardUserDefaults] setObject:data[@"x"] forKey:MLEyeXPositionKey];
-    }
-    NSNumber *eyeYPosition = [[NSUserDefaults standardUserDefaults] objectForKey:MLEyeYPositionKey];
-    if (!eyeYPosition) {
-        [[NSUserDefaults standardUserDefaults] setObject:data[@"y"] forKey:MLEyeYPositionKey];
-    }
-    NSNumber *eyeWidth = [[NSUserDefaults standardUserDefaults] objectForKey:MLEyeWidthKey];
-    if (!eyeWidth) {
-        [[NSUserDefaults standardUserDefaults] setObject:data[@"width"] forKey:MLEyeWidthKey];
-    }
-    NSNumber *eyeHeight = [[NSUserDefaults standardUserDefaults] objectForKey:MLEyeHeightKey];
-    if (!eyeHeight) {
-        [[NSUserDefaults standardUserDefaults] setObject:data[@"height"] forKey:MLEyeHeightKey];
-    }
+- (void)setupDefaults {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"defaults" ofType:@"plist"];
+    NSMutableDictionary *defaults = [NSMutableDictionary dictionaryWithContentsOfFile:path];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaults];
 }
 
 - (void)setupOpenNI:(CocoaOpenNI *)openNI {

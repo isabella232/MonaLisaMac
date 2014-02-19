@@ -320,7 +320,6 @@
 				CA24CA6A18171395008E9E0F /* MonaLisaMac-Prefix.pch */,
 				CA24CA6B18171395008E9E0F /* Credits.rtf */,
 				83593AE761418FCD9752C419 /* KinectConfig.xml */,
-				CAA24F6818230F200073D762 /* defaults.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -360,6 +359,7 @@
 				CA1975C5185241E600184611 /* spark.png */,
 				CAB82FAB18281BB700B8DCD1 /* Interstate-Bold.otf */,
 				CAB82FB218283A6200B8DCD1 /* Interstate-Regular.otf */,
+				CAA24F6818230F200073D762 /* defaults.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
