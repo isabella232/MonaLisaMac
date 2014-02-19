@@ -57,12 +57,12 @@
     self.leftNormalMaterial.diffuse.contents  = diffuseImage;
     self.leftNormalMaterial.specular.contents = [NSColor whiteColor];
     self.leftNormalMaterial.shininess = 1.0;
-    self.leftNormalMaterial.diffuse.contentsTransform = CATransform3DMakeTranslation(-0.05,0,0);
+    self.leftNormalMaterial.diffuse.contentsTransform = CATransform3DMakeTranslation(-0.02,0,0);
     sphereGeomLeft.materials = @[self.leftNormalMaterial];
     self.rightNormalMaterial = [self.leftNormalMaterial copy];
     diffuseImage = [NSImage imageNamed:@"rightEye"];
     self.rightNormalMaterial.diffuse.contents = diffuseImage;
-    self.rightNormalMaterial.diffuse.contentsTransform = CATransform3DMakeTranslation(0.05,0,0);
+    self.rightNormalMaterial.diffuse.contentsTransform = CATransform3DMakeTranslation(0.09,0,0);
     sphereGeomRight.materials = @[self.rightNormalMaterial];
 
     SCNNode *cameraNode = [SCNNode node];

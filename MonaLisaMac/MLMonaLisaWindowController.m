@@ -115,7 +115,7 @@ CGSize CGSizeScale(CGSize size, CGFloat xScale, CGFloat yScale) {
 }
 
 - (void)updateEyeLocationWithHeadPosition:(XnVector3D)headPosition {
-    CGFloat monaLisaEyeSeparationInMM = 60.0f;
+    CGFloat monaLisaEyeSeparationInMM = 85.0f;
     self.headPosition = headPosition;
 
     headPosition.Y += 150.f;
