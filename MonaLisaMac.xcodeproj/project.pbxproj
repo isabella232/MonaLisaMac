@@ -43,7 +43,7 @@
 		CA61D4A3182351B000D64219 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA61D4A2182351B000D64219 /* Quartz.framework */; };
 		CA9ADE5C181A254C00EC8A34 /* MLEyesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9ADE5A181A254C00EC8A34 /* MLEyesViewController.m */; };
 		CA9ADE5D181A254C00EC8A34 /* MLEyesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9ADE5B181A254C00EC8A34 /* MLEyesView.xib */; };
-		CAA24F6918230F200073D762 /* EyesFrame.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAA24F6818230F200073D762 /* EyesFrame.plist */; };
+		CAA24F6918230F200073D762 /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAA24F6818230F200073D762 /* defaults.plist */; };
 		CAB82FA91827F39900B8DCD1 /* MLEventWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB82FA71827F39900B8DCD1 /* MLEventWelcomeViewController.m */; };
 		CAB82FAA1827F39900B8DCD1 /* MLEventWelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB82FA81827F39900B8DCD1 /* MLEventWelcomeView.xib */; };
 		CAB82FB0182820BE00B8DCD1 /* Interstate-Bold.otf in CopyFiles */ = {isa = PBXBuildFile; fileRef = CAB82FAB18281BB700B8DCD1 /* Interstate-Bold.otf */; };
@@ -132,7 +132,7 @@
 		CA9ADE5A181A254C00EC8A34 /* MLEyesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLEyesViewController.m; sourceTree = "<group>"; };
 		CA9ADE5B181A254C00EC8A34 /* MLEyesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLEyesView.xib; sourceTree = "<group>"; };
 		CA9ADE5F181A258400EC8A34 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
-		CAA24F6818230F200073D762 /* EyesFrame.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EyesFrame.plist; sourceTree = "<group>"; };
+		CAA24F6818230F200073D762 /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defaults.plist; sourceTree = "<group>"; };
 		CAB82FA61827F39900B8DCD1 /* MLEventWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLEventWelcomeViewController.h; sourceTree = "<group>"; };
 		CAB82FA71827F39900B8DCD1 /* MLEventWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLEventWelcomeViewController.m; sourceTree = "<group>"; };
 		CAB82FA81827F39900B8DCD1 /* MLEventWelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLEventWelcomeView.xib; sourceTree = "<group>"; };
@@ -320,7 +320,7 @@
 				CA24CA6A18171395008E9E0F /* MonaLisaMac-Prefix.pch */,
 				CA24CA6B18171395008E9E0F /* Credits.rtf */,
 				83593AE761418FCD9752C419 /* KinectConfig.xml */,
-				CAA24F6818230F200073D762 /* EyesFrame.plist */,
+				CAA24F6818230F200073D762 /* defaults.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -469,7 +469,7 @@
 				CA1975C7185241E600184611 /* spark.png in Resources */,
 				CAB82FAA1827F39900B8DCD1 /* MLEventWelcomeView.xib in Resources */,
 				CA1975C6185241E600184611 /* Snow.sks in Resources */,
-				CAA24F6918230F200073D762 /* EyesFrame.plist in Resources */,
+				CAA24F6918230F200073D762 /* defaults.plist in Resources */,
 				CA24CA7318171395008E9E0F /* MainMenu.xib in Resources */,
 				CA9ADE5D181A254C00EC8A34 /* MLEyesView.xib in Resources */,
 				8359397EB1DC6787BE5201E7 /* KinectConfig.xml in Resources */,
