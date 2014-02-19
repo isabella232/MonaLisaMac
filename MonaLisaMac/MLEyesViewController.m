@@ -40,34 +40,30 @@
     sceneView.scene = [SCNScene scene];
     SCNNode *root = sceneView.scene.rootNode;
 
-    SCNSphere *sphereGeomLeft = [SCNSphere sphereWithRadius:7];
+    SCNSphere *sphereGeomLeft = [SCNSphere sphereWithRadius:12];
     self.leftEyeNode = [SCNNode nodeWithGeometry:sphereGeomLeft];
     self.leftEyeNode.position = SCNVector3Make(-15, 0.0, 0.0);
     [root addChildNode:self.leftEyeNode];
     self.originalLeftEyeTransform = self.leftEyeNode.transform;
 
-    SCNSphere *sphereGeomRight = [SCNSphere sphereWithRadius:7];
+    SCNSphere *sphereGeomRight = [SCNSphere sphereWithRadius:12];
     self.rightEyeNode = [SCNNode nodeWithGeometry:sphereGeomRight];
     self.rightEyeNode.position = SCNVector3Make(18, 0.0, 0.0);
     [root addChildNode:self.rightEyeNode];
     self.originalRightEyeTransform = self.rightEyeNode.transform;
 
-    NSImage *diffuseImage = [NSImage imageNamed:@"eye"];
+    NSImage *diffuseImage = [NSImage imageNamed:@"leftEye"];
     self.leftNormalMaterial = [SCNMaterial material];
     self.leftNormalMaterial.diffuse.contents  = diffuseImage;
     self.leftNormalMaterial.specular.contents = [NSColor whiteColor];
     self.leftNormalMaterial.shininess = 1.0;
-    self.leftNormalMaterial.diffuse.contentsTransform = CATransform3DMakeTranslation(-0.10,0,0);
+    self.leftNormalMaterial.diffuse.contentsTransform = CATransform3DMakeTranslation(-0.05,0,0);
     sphereGeomLeft.materials = @[self.leftNormalMaterial];
     self.rightNormalMaterial = [self.leftNormalMaterial copy];
+    diffuseImage = [NSImage imageNamed:@"rightEye"];
+    self.rightNormalMaterial.diffuse.contents = diffuseImage;
     self.rightNormalMaterial.diffuse.contentsTransform = CATransform3DMakeTranslation(0.05,0,0);
     sphereGeomRight.materials = @[self.rightNormalMaterial];
-
-    diffuseImage = [NSImage imageNamed:@"eye_cyborg"];
-    self.leftAlternateMaterial = [self.leftNormalMaterial copy];
-    self.leftAlternateMaterial.diffuse.contents = diffuseImage;
-    self.rightAlternateMaterial = [self.rightNormalMaterial copy];
-    self.rightAlternateMaterial.diffuse.contents = diffuseImage;
 
     SCNNode *cameraNode = [SCNNode node];
     cameraNode.camera = [SCNCamera camera];

@@ -61,7 +61,7 @@ CGSize CGSizeScale(CGSize size, CGFloat xScale, CGFloat yScale) {
     self.normalImage = self.monaLisaImageView.image;
     self.alternateImage = [NSImage imageNamed:@"mona_lisa_cyborg"];
 
-    ((NSView *)self.window.contentView).layer.backgroundColor = [NSColor blackColor].CGColor;
+    ((NSView *)self.window.contentView).layer.backgroundColor = [NSColor whiteColor].CGColor;
 
     self.originalEyeFrame = self.eyesViewController.view.frame;
     self.originalMonaLisaSize = CGSizeMake(1080, 1920);
@@ -92,6 +92,8 @@ CGSize CGSizeScale(CGSize size, CGFloat xScale, CGFloat yScale) {
 #pragma mark - Private
 
 - (void)resizeMonaLisaForWindowSize:(NSSize)windowSize {
+    if (!self.monaLisaImageView.image) return;
+
     CGFloat sx = self.monaLisaImageView.frame.size.width / self.monaLisaImageView.image.size.width;
     CGFloat sy = self.monaLisaImageView.frame.size.height / self.monaLisaImageView.image.size.height;
     CGFloat s = fmin(sx, sy);

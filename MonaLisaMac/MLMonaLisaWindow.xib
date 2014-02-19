@@ -25,7 +25,7 @@
                     <imageView autoresizesSubviews="NO" wantsLayer="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="HHK-y6-2Ed" userLabel="Mona Lisa Image View">
                         <rect key="frame" x="0.0" y="0.0" width="360" height="640"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="Lql-Xy-3hm"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="defaultWelcomeImage" id="Lql-Xy-3hm"/>
                         <connections>
                             <binding destination="MH5-Ft-NZ0" name="value" keyPath="values.welcomeImage" id="W9R-P5-TuW">
                                 <dictionary key="options">
@@ -42,4 +42,7 @@
         </window>
         <userDefaultsController representsSharedInstance="YES" id="MH5-Ft-NZ0"/>
     </objects>
+    <resources>
+        <image name="defaultWelcomeImage" width="1080" height="1920"/>
+    </resources>
 </document>
