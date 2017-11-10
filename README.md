@@ -1,7 +1,9 @@
 MonaLisaMac
 ===========
 
-art + head tracking + cyborgs
+This is the source code for the foyer installation in our Calgary office. The eyes of our robot logo, displayed on a TV, would follow people as they entered and were tracked with a Kinect.
+
+This repo is no longer maintained and is being shared as-is for the sake of it.
 
 Installation
 ------------
@@ -28,6 +30,18 @@ Restart your computer and connect your Kinect. That's fun to say.
 
 Run `cd ~/Kinect/nite-bin-macosx-v1.5.0.2/Samples/Bin/Release/ && ./Sample-PointViewer` to test that everything is working properly.
 
+Author
+------
+
+- [Brandon Evans](https://github.com/interstateone)
+
+Contact
+-------
+
+<a href="http://www.robotsandpencils.com"><img src="R&PLogo.png" width="153" height="74" /></a>
+
+Follow Robots & Pencils on Twitter ([@robotsNpencils](https://twitter.com/robotsNpencils))
+
 License
 -------
 
@@ -36,3 +50,4 @@ Includes modified [CocoaOpenNI](https://github.com/johnboiles/CocoaOpenNI) code 
 Because this software relies on an OpenNI .dylib, which is GPLv3 licensed, this software is also GPLv3 licensed for compliance in the event it is ever made public or distributed.
 
 See the LICENSE file for more information.
+
