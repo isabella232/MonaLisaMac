@@ -81,7 +81,7 @@ NSString * const MLEyeHeightKey = @"MLEyeHeightKey";
 - (void)setupOpenNI:(CocoaOpenNI *)openNI {
     [openNI startWithConfigPath:[[NSBundle mainBundle] pathForResource:@"KinectConfig" ofType:@"xml"]];
 
-    [NSTimer scheduledTimerWithTimeInterval:1.0 / 30.0 block:^(NSTimer *timer){
+    [NSTimer bk_scheduledTimerWithTimeInterval:1.0 / 30.0 block:^(NSTimer *timer) {
         if ([CocoaOpenNI sharedOpenNI].started) {
             // Sometimes we get a crash in here
             [[CocoaOpenNI sharedOpenNI] context].WaitAndUpdateAll();
@@ -131,7 +131,7 @@ NSString * const MLEyeHeightKey = @"MLEyeHeightKey";
 
 - (void)createChangeUserTimer {
     NSInteger duration = 1 + arc4random_uniform(3);
-    self.changeUserTimer = [NSTimer scheduledTimerWithTimeInterval:duration block:^(NSTimer *timer) {
+    self.changeUserTimer = [NSTimer bk_scheduledTimerWithTimeInterval:duration block:^(NSTimer *timer) {
 
         // Increment the userID and loop if past bounds
         XnInt16 userCount = [[CocoaOpenNI sharedOpenNI] userGenerator].GetNumberOfUsers();
