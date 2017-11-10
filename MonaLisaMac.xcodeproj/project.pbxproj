@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05BA06F7198E4A139E0566C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 132DCC2CEE7B432CBBB7B5D9 /* libPods.a */; };
 		83593839ED7468B95E1ACCFC /* MLAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83593CB5C828A4E2E987BEE8 /* MLAppDelegate.mm */; };
 		8359389098312A22CC448739 /* SceneDrawer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83593678CAD4029D9F936C24 /* SceneDrawer.mm */; };
 		8359397EB1DC6787BE5201E7 /* KinectConfig.xml in Resources */ = {isa = PBXBuildFile; fileRef = 83593AE761418FCD9752C419 /* KinectConfig.xml */; };
 		83593B80441ACF6CB4101E45 /* DepthView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 83593478A335E84602FFD175 /* DepthView.mm */; };
 		83593C3E23BFB733366F9276 /* Skeleton.mm in Sources */ = {isa = PBXBuildFile; fileRef = 835933564A994BAE9E63656F /* Skeleton.mm */; };
+		8AAF18D4A82818A9E36575BB /* libPods-MonaLisaMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D162C7AD7AF3E150AF0E21 /* libPods-MonaLisaMac.a */; };
 		CA0D732E1819D4E7007F68CE /* CocoaOpenNI.mm in Sources */ = {isa = PBXBuildFile; fileRef = CA0D73271819D4E7007F68CE /* CocoaOpenNI.mm */; };
 		CA0D73301819D4E7007F68CE /* XnVector3DUtils.cc in Sources */ = {isa = PBXBuildFile; fileRef = CA0D732B1819D4E7007F68CE /* XnVector3DUtils.cc */; };
 		CA0D737A1819DBE0007F68CE /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA0D73791819DBE0007F68CE /* GLUT.framework */; };
@@ -79,7 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		132DCC2CEE7B432CBBB7B5D9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		12D162C7AD7AF3E150AF0E21 /* libPods-MonaLisaMac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MonaLisaMac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8359331AA8738D2F48FF0A7F /* Skeleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Skeleton.h; path = MonaLisaMac/Skeleton.h; sourceTree = SOURCE_ROOT; };
 		8359331C1DB2A4F7D8832EB3 /* MLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLAppDelegate.h; sourceTree = "<group>"; };
 		835933564A994BAE9E63656F /* Skeleton.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Skeleton.mm; path = MonaLisaMac/Skeleton.mm; sourceTree = SOURCE_ROOT; };
@@ -89,6 +89,7 @@
 		83593ADCEE579514DBD142EC /* DepthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DepthView.h; path = MonaLisaMac/DepthView.h; sourceTree = SOURCE_ROOT; };
 		83593AE761418FCD9752C419 /* KinectConfig.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = KinectConfig.xml; sourceTree = "<group>"; };
 		83593CB5C828A4E2E987BEE8 /* MLAppDelegate.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = MLAppDelegate.mm; sourceTree = "<group>"; };
+		A6F9CD7C74514213BA5D317A /* Pods-MonaLisaMac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonaLisaMac.release.xcconfig"; path = "Pods/Target Support Files/Pods-MonaLisaMac/Pods-MonaLisaMac.release.xcconfig"; sourceTree = "<group>"; };
 		CA0D73261819D4E7007F68CE /* CocoaOpenNI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocoaOpenNI.h; sourceTree = "<group>"; };
 		CA0D73271819D4E7007F68CE /* CocoaOpenNI.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CocoaOpenNI.mm; sourceTree = "<group>"; };
 		CA0D732A1819D4E7007F68CE /* XnVector3DUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XnVector3DUtils.h; sourceTree = "<group>"; };
@@ -142,7 +143,7 @@
 		CABA66CA181716D100793230 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		CABA66CC181716E800793230 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		CABA66CF1817170400793230 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		E79CA963ACAD42449A2E3BB0 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		FDA719F74752A6B339BAFB5D /* Pods-MonaLisaMac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonaLisaMac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MonaLisaMac/Pods-MonaLisaMac.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +162,7 @@
 				CABA66CE181716FE00793230 /* AVFoundation.framework in Frameworks */,
 				CA24CA5D18171395008E9E0F /* Cocoa.framework in Frameworks */,
 				CA0D737B1819DC36007F68CE /* libOpenNI.dylib in Frameworks */,
-				05BA06F7198E4A139E0566C1 /* libPods.a in Frameworks */,
+				8AAF18D4A82818A9E36575BB /* libPods-MonaLisaMac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +210,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		C3A3A35941164ED9142AE324 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FDA719F74752A6B339BAFB5D /* Pods-MonaLisaMac.debug.xcconfig */,
+				A6F9CD7C74514213BA5D317A /* Pods-MonaLisaMac.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CA0D73211819D44E007F68CE /* OpenNI */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,7 +260,7 @@
 				CA24CA8018171396008E9E0F /* MonaLisaMacTests */,
 				CA24CA5B18171395008E9E0F /* Frameworks */,
 				CA24CA5A18171395008E9E0F /* Products */,
-				E79CA963ACAD42449A2E3BB0 /* Pods.xcconfig */,
+				C3A3A35941164ED9142AE324 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -278,7 +288,7 @@
 				CA24CA5C18171395008E9E0F /* Cocoa.framework */,
 				CA24CA7B18171396008E9E0F /* XCTest.framework */,
 				CA24CA5E18171395008E9E0F /* Other Frameworks */,
-				132DCC2CEE7B432CBBB7B5D9 /* libPods.a */,
+				12D162C7AD7AF3E150AF0E21 /* libPods-MonaLisaMac.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -384,12 +394,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA24CA8A18171396008E9E0F /* Build configuration list for PBXNativeTarget "MonaLisaMac" */;
 			buildPhases = (
-				7C677B0F69C14A32B0361CA0 /* Check Pods Manifest.lock */,
+				FFCF65727E44C1CFEE1F39C7 /* [CP] Check Pods Manifest.lock */,
 				CA24CA5518171395008E9E0F /* Sources */,
 				CA24CA5618171395008E9E0F /* Frameworks */,
 				CA24CA5718171395008E9E0F /* Resources */,
-				33BB7A48B0E243C888CA64E2 /* Copy Pods Resources */,
 				CAB82FAF182820B300B8DCD1 /* CopyFiles */,
+				579F6C3F9E5F86BA73749D88 /* [CP] Embed Pods Frameworks */,
+				21DF8212D0A5920386DD9CAB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -487,34 +498,55 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		33BB7A48B0E243C888CA64E2 /* Copy Pods Resources */ = {
+		21DF8212D0A5920386DD9CAB /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MonaLisaMac/Pods-MonaLisaMac-resources.sh",
+				"${PODS_ROOT}/MASPreferences/Framework/en.lproj/MASPreferencesWindow.xib",
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MonaLisaMac/Pods-MonaLisaMac-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7C677B0F69C14A32B0361CA0 /* Check Pods Manifest.lock */ = {
+		579F6C3F9E5F86BA73749D88 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MonaLisaMac/Pods-MonaLisaMac-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFCF65727E44C1CFEE1F39C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MonaLisaMac-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -664,7 +696,7 @@
 		};
 		CA24CA8B18171396008E9E0F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E79CA963ACAD42449A2E3BB0 /* Pods.xcconfig */;
+			baseConfigurationReference = FDA719F74752A6B339BAFB5D /* Pods-MonaLisaMac.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
@@ -691,7 +723,7 @@
 		};
 		CA24CA8C18171396008E9E0F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E79CA963ACAD42449A2E3BB0 /* Pods.xcconfig */;
+			baseConfigurationReference = A6F9CD7C74514213BA5D317A /* Pods-MonaLisaMac.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";

@@ -4,39 +4,23 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-BlocksKit.xcscheme</key>
+		<key>BlocksKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MASPreferences.xcscheme</key>
+		<key>MASPreferences.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-MonaLisaMac.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>557F45E2EB3444FAB91B2672</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>59589336924149C4815DFD0E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>80558F80387743369A1DBF00</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

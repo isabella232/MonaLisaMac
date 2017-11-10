@@ -1,2 +1,4 @@
-pod 'BlocksKit'
-pod 'MASPreferences'
+target :MonaLisaMac do
+    pod 'BlocksKit'
+    pod 'MASPreferences'
+end
